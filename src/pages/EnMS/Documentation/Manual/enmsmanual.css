@@ -1,0 +1,7 @@
+.enms-add-plus {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(80%) saturate(2604%) hue-rotate(166deg) brightness(101%) contrast(101%);
+}
+
+.add-manual-btn:hover .enms-add-plus {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(243deg) brightness(104%) contrast(101%);
+}

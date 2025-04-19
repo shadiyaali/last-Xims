@@ -1,0 +1,111 @@
+.changesubplan {
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  height: 100%;
+}
+.changesubplanhead {
+  font-family: "Switzer SemiBold";
+  font-size: 24px;
+  line-height: 27.77px;
+  color: #25282b;
+}
+.changesubplanlabel {
+  font-family: "Switzer Regular";
+  font-size: 14px;
+  line-height: 18.48px;
+  color: #25282b;
+}
+.custom-dropdowns {
+  background-color: transparent;
+  border: 1px solid #e9e9e9;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Switzer Regular";
+  color: #25282b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.custom-dropdowns.placeholder {
+  color: #72787c;
+  font-family: "Switzer Regular";
+}
+
+.changesubplanbtn {
+  background-color: #1e4da1;
+  width: 100%;
+  height: 48px;
+  color: white;
+  font-family: "Switzer SemiBold";
+  font-size: 18px;
+  line-height: 23.76px;
+  margin-top: 10px;
+}
+
+.changesubplanbtn:hover {
+  background-color: #18366b;
+}
+.chanegsubtext {
+  font-family: "Switzer Regular";
+  font: 14px;
+  line-height: 18.48px;
+  color: #25282b;
+}
+.chanegsubtextspan {
+  font-family: "Switzer Medium";
+  font-size: 20px;
+  line-height: 30px;
+  color: #23b95f;
+}
+
+.changesubplan.dark {
+  border: 1px solid #343434;
+}
+.changesubplan.dark .changesubplanhead {
+  color: white;
+}
+.changesubplan.dark .changesubplanlabel {
+  color: #d4d7da;
+}
+.changesubplan.dark .custom-dropdowns.placeholder {
+  color: #72787c;
+  font-family: "Switzer Regular";
+}
+.changesubplan.dark .custom-dropdowns {
+  border: 1px solid #343434;
+  color: white;
+}
+.changesubplan.dark .dropdown-list {
+  background-color: #1c1c1c;
+  color: white;
+}
+.changesubplan.dark .dropdown-list li:hover {
+  background-color: rgb(14, 14, 14);
+}
+.changesubplan.dark .changesubplanbtn {
+  background-color: #3c3b3b;
+}
+.changesubplan.dark .changesubplanbtn:hover {
+  background-color: #2d2d2d;
+}
+.changesubplan.dark .chanegsubtext {
+  color: white;
+}
+
+.dropdown-inputs {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #25282B;
+}
+
+.changesubplan.dark .dropdown-inputs {
+  color: white;
+}
+

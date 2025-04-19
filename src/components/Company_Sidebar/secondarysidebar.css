@@ -1,0 +1,68 @@
+/* SecondarySidebar.css */
+.secondary-sidebar {
+  transition: width 0.3s ease;
+}
+
+.secondary-sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Custom scrollbar for the sidebar */
+.secondary-sidebar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.secondary-sidebar::-webkit-scrollbar-track {
+  background: #13131a;
+}
+
+.secondary-sidebar::-webkit-scrollbar-thumb {
+  background: #1c1c24;
+  border-radius: 4px;
+}
+
+.secondary-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #1c1c24;
+}
+
+/* For Firefox scrollbar */
+.secondary-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #1c1c24 #1c1c24;
+}
+
+
+.second-sidebar .second-sidebar-spans {
+  font-family: 'Switzer Regular';
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+}
+.second-sidebar:hover .second-sidebar-spans {
+  color: white;
+ 
+}
+/* Hover Effect: Turn White */
+.second-sidebar:hover img,
+.active-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Ensure Active State is Also White */
+.active-icon {
+    filter: brightness(0) invert(1);
+}
+
+
+
+.menu-item:hover {
+    color: #007bff; /* Change text color on hover */
+  }
+  
+  .menu-item:hover .menu-icon {
+    filter: brightness(1.2); /* Lighten the icon */
+  }
+  
+
+

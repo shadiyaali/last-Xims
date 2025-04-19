@@ -1,0 +1,73 @@
+.add-cmy-error-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-cmy-error-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: #25282b;
+  border-radius: 8px;
+  padding: 20px;
+  width: 414px;
+  height: 346px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-cmy-error-modal.dark {
+  background-color: #1C1C24;
+}
+
+.add-cmy-error-deleteclosebtns {
+  background-color: #F7F7F7;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.add-cmy-error-modal.dark .add-cmy-error-deleteclosebtns {
+  background-color: #24242D;
+}
+
+.add-cmy-error-modal.dark .close {
+  color: white;
+}
+
+.add-cmy-error-modal.light .errors-dark {
+  display: none;
+}
+
+.add-cmy-error-modal.dark .errors-light {
+  display: none;
+}
+
+.add-cmy-error-modal.dark .add-cmy-error-messege {
+  color: white;
+}
+
+.add-cmy-error-messegehead {
+  margin-top: 16px;
+  font-family: 'Switzer SemiBold';
+  font-size: 26px;
+  color: #F9291F;
+  padding-bottom: 16px;
+}
+
+.add-cmy-error-messege {
+  font-family: 'Switzer Regular';
+  font-size: 16px;
+  color: #25282B;
+}

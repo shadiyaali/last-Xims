@@ -1,0 +1,23 @@
+.add-compliance-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+
+.add-compliance-label {
+    font-family: 'Switzer Light'; 
+    font-size: 16px;
+    color: white;
+}
+
+.add-compliance-inputs {
+    height: 49px;
+    background-color: #24242D;
+    border: none;
+    border-radius: 6px;
+    margin-top: 12px;
+    outline: none;
+    padding: 0px 20px;
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    color: #AAAAAA;
+}

@@ -1,0 +1,64 @@
+.employee-performance-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+
+.action-btn {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(10%) saturate(28%) hue-rotate(27deg) brightness(95%) contrast(83%);
+}
+
+.add-question-label {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    color: white;
+}
+
+.add-question-inputs {
+    font-family: 'Switzer Regular';
+    font-size: 15px;
+    color: #AAAAAA;
+}
+
+.add-question-theads {
+    font-family: 'Switzer Light'; 
+    font-size: 14px;
+    color: #AAAAAA;
+    font-weight: 400;
+}
+
+.add-question-data {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    color: white;
+}
+
+.select-employee-dropdown {
+    font-family: 'Switzer Light'; 
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.evaluate-modal-head {
+    font-family: 'Switzer Light'; 
+    font-size: 16px;
+    color: white;
+}
+
+.employee-evaluation-theads {
+    font-family: 'Switzer Light'; 
+    font-size: 14px;
+    color: #AAAAAA;
+    font-weight: 400;
+}
+
+.employee-evaluate-data {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    color: white;
+}
+
+.rating-data {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    color: #AAAAAA;
+}

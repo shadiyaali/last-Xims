@@ -1,0 +1,52 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #25282b;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }  
+  .deleteclosebtns {
+    padding: 8px 20px;
+    margin-top: 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Switzer Light';
+  }
+  
+  .deleteclosebtns:hover {
+    background-color: #ae1c1c;
+  }
+  
+  .messegehead{
+    margin-top: 5px;
+    font-family: 'Switzer SemiBold';
+    font-size:25px;
+  }
+  .messege {
+    font-family: 'Switzer Regular';
+    font-size: medium;
+  }
+  .modal-content.dark .messegehead, .modal-content.dark .messege {
+    color: white;
+  }

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Bold';
+    src: url('../src/assets/fonts/Cabinet Grotesk/CabinetGrotesk-Bold.woff') format('woff');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Cabinet Grotesk Regular';
+    src: url('../src/assets/fonts/Cabinet Grotesk/CabinetGrotesk-Regular.woff') format('woff');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Cabinet Grotesk Light';
+    src: url('../src/assets/fonts/Cabinet Grotesk/CabinetGrotesk-Light.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('../src/assets/fonts/Cabinet Grotesk/CabinetGrotesk.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Switzer Light'; 
+    src: url('../src/assets/fonts/Switzer/Switzer-Light.otf') format('truetype');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Switzer Regular';
+    src: url('../src/assets/fonts/Switzer/Switzer-Regular.otf') format('truetype');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Switzer SemiBold';
+    src: url('../src/assets/fonts/Switzer/Switzer-Semibold.otf') format('truetype');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Switzer Medium';
+    src: url('../src/assets/fonts/Switzer/Switzer-Medium.otf') format('truetype');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Technor Light';
+    src: url('../src/assets/fonts/Technor/Technor-Light.otf') format('truetype');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Technor Regular';
+    src: url('../src/assets/fonts/Technor/Technor-Regular.otf') format('truetype');
+    font-style: normal;
+  }

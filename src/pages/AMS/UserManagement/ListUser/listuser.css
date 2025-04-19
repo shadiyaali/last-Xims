@@ -1,0 +1,100 @@
+.list-users-main {
+    border-radius: 8px;
+}
+
+.list-users-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    font-style: normal;
+    color: white;
+    line-height: normal;
+}
+
+.serach-input {
+    width: 332px;
+    height: 42px;
+    padding-left: 10px;
+    border: 1px solid #383840;
+    border-radius: 6px;
+    font-family: 'Switzer Light';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.serach-input::placeholder {
+    color: #FFFFFF80;
+}
+
+.add-user-btn {
+     
+    border-radius: 4px;
+    width: 140px;
+    height: 42px;
+    padding: 10px;
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+  
+}
+
+.add-user-btn:hover .ams-add-plus {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(102%) contrast(103%);
+}
+
+.add-user-theads {
+    color: #AAAAAA;
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.add-user-datas {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.total-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.swipe-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: #FFFFFFBF;
+}
+
+.pagin-active {
+    font-family: 'Switzer Regular';
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.pagin-inactive {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: #AAAAAA;
+}
+
+.not-found {
+    font-family: 'Switzer Regular';
+    color: gray;
+}

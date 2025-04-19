@@ -1,0 +1,18 @@
+.interested-parties-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    color: white;
+}
+
+.qms-interested-parties-thead {
+    font-family: 'Switzer Light'; 
+    font-size: 14px;
+    font-weight: 400;
+    color: #AAAAAA;
+}
+
+.qms-interested-parties-data {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    color: white;
+}

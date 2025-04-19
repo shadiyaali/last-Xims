@@ -1,0 +1,51 @@
+.notifications-head {
+    font-family: 'Switzer Medium';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+.notifications-tabs {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.notification-status {
+    font-family: 'Switzer Light'; 
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    color: white;
+}
+
+.notification-status-user {
+    font-family: 'Switzer Light'; 
+    font-size: 10px;
+    font-style: normal;
+    line-height: 15px;
+    color: white;
+}
+
+.notification-status-timestamp {
+    font-family: 'Switzer Light'; 
+    font-size: 10px;
+    font-style: normal;
+    line-height: 18px;
+    color: #AAA;
+}
+
+.notification-click-view {
+    border: 1px solid #1E84AF;
+    font-family: 'Switzer Light';   
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    color: #1E84AF;
+}
+
+.notification-click-view:hover {
+    background-color: #1E84AF;
+    color: white;
+}

@@ -1,0 +1,37 @@
+.add-training-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+
+.list-training-btn {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+}
+
+.list-training-btn:hover {
+    background-color: #858585;
+    color: white;
+}
+
+.add-training-label {
+    font-family: 'Switzer Light';
+    font-size: 16px;
+    color: white;
+}
+
+.add-training-inputs {
+    height: 49px;
+    background-color: #24242D;
+    border-radius: 6px;
+    border-color: #24242D;
+    padding: 10px 16px;
+    outline: none;
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.choose-file {
+    font-family: 'Switzer Light'; 
+    font-size: 16px;
+}

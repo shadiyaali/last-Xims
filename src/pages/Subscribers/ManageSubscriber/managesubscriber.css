@@ -1,0 +1,594 @@
+.managesub {
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+}
+.managesubhead {
+  font-family: "Switzer SemiBold";
+  font-size: 24px;
+  line-height: 27.77px;
+  color: #25282b;
+}
+.subtheads {
+  border-color: #e9e9e9;
+  background-color: #f7f7f7;
+}
+
+.subthead {
+  font-family: "Switzer Regular";
+  font-weight: 400;
+  color: #677487;
+  font-size: 12px;
+  line-height: 13.88px;
+}
+
+.subbody {
+  font-family: "Switzer Regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: #677487;
+}
+.subtoggleactive {
+  background-color: #1bc194;
+  width: 30px;
+}
+.subtoggleblock {
+  background-color: #f36643;
+  width: 30px;
+}
+.translate-x-22 {
+  transform: translateX(0.8rem);
+  background-color: white;
+}
+
+.translate-x-00 {
+  transform: translateX(-0.1rem);
+  background-color: white;
+}
+
+.subrows {
+  border: 1px solid #e9e9e9;
+  border-left: transparent;
+  border-right: transparent;
+}
+.subrows:last-child {
+  border-bottom: none;
+}
+.subrows:hover {
+  background-color: #f3f4f6;
+}
+
+.managesub.dark {
+  border: 1px solid #343434;
+}
+.managesub.dark .managesubhead {
+  color: white;
+}
+.managesub.dark .subtheads {
+  border-color: #232323;
+  background-color: #1c1c24;
+}
+.managesub.dark .subthead {
+  color: #adadad;
+}
+.managesub.dark .subbody {
+  color: white;
+}
+.managesub.dark .subrows {
+  border: 1px solid #343434;
+  border-left: transparent;
+  border-right: transparent;
+}
+.managesub.dark .subrows:last-child {
+  border-bottom: none;
+}
+.managesub.dark .subrows:hover {
+  background-color: rgb(14, 14, 14);
+}
+.managesub.dark .managesubactionbtn {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.managesub.dark .subtoggleactive {
+  background-color: #1ed7a6;
+}
+.managesub.dark .subtoggleblock {
+  background-color: #e13f23;
+}
+.managesub.dark .translate-x-22 {
+  background-color: #0d0d0d;
+}
+.slnumbermob {
+  width: 56px;
+  padding: 16px;
+}
+.mobexpiredate {
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  color: #677487;
+}
+.mobheads {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13.88px;
+  padding-bottom: 3px;
+  color: #677487;
+}
+.paginationnummanagesub {
+  color: #1e4da1;
+}
+.paginationmob.dark .paginationnummanagesub {
+  color: white;
+}
+
+.export-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.export-modal-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.managesub.dark .export-modal-container {
+  background-color: #1c1c24;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  /* margin-top: 5px; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscription-plans {
+  appearance: none; /* Removes default styling */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../../../assets/images/Subscriber/dropdownicon.svg")
+    no-repeat right 10px center;
+  background-size: 13px; /* Adjust size based on your icon */
+  padding-right: 30px; /* Space for the icon */
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  font-size: 15px;
+  height: 40px;
+  width: 100%; /* Adjust width as needed */
+  cursor: pointer;
+  font-family: "Switzer Regular";
+  color: #25282b;
+}
+
+.managesub.dark .subscription-plans {
+  border: 1px solid #343434;
+  color: white;
+}
+
+.custom-radios {
+  font-family: "Switzer Regular";
+  font-size: 14px;
+  line-height: 24px;
+  color: #c8c8c8; /* Default text color */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Hide the default radio input */
+.custom-radios input[type="radio"] {
+  display: none;
+}
+
+/* Custom square box */
+.radio-boxes {
+  width: 26px; /* Box width */
+  height: 26px; /* Box height */
+  border: 2px solid #c8c8c8;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.managesub.dark .radio-boxes {
+  border: 2px solid #707070;
+}
+
+/* Tick mark (hidden by default) */
+.radio-boxes::after {
+  content: "";
+  margin-top: 3px;
+  width: 13px; /* Adjust tick mark width */
+  height: 13px; /* Adjust tick mark height */
+  background-image: url("../../../assets/images/Subscriber/tickmark.svg");
+  background-size: contain; /* Ensures the image fits within the defined width and height */
+  background-repeat: no-repeat;
+  display: none;
+}
+.managesub.dark .radio-boxes::after {
+  content: "";
+  margin-top: 3px;
+  width: 13px; /* Adjust tick mark width */
+  height: 13px; /* Adjust tick mark height */
+  background-image: url("../../../assets/images/Subscriber/tickmark.svg");
+  background-size: contain; /* Ensures the image fits within the defined width and height */
+  background-repeat: no-repeat;
+  display: none;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%)
+    hue-rotate(309deg) brightness(105%) contrast(100%);
+}
+
+/* Show the tick mark when checked */
+.custom-radios input[type="radio"]:checked + .radio-boxes::after {
+  display: block;
+}
+
+/* Change box border color when checked */
+.custom-radios input[type="radio"]:checked + .radio-boxes {
+  border-color: #254396; /* Border color when checked */
+}
+.managesub.dark .custom-radios input[type="radio"]:checked + .radio-boxes {
+  border-color: white; /* Border color when checked */
+}
+
+/* Change text color when checked */
+.custom-radios input[type="radio"]:checked + .radio-boxes + span {
+  color: #254396; /* Text color when checked */
+}
+.managesub.dark
+  .custom-radios
+  input[type="radio"]:checked
+  + .radio-boxes
+  + span {
+  color: white; /* Text color when checked */
+}
+.selectsubhead {
+  font-size: 15px;
+  color: #25282b;
+  font-family: "Switzer Regular";
+}
+.managesub.dark .selectsubhead {
+  color: white;
+}
+.plannameoptions {
+  font-family: "Switzer Regular";
+  font-size: 14px;
+  cursor: pointer;
+  color: #25282b;
+  background-color: white;
+}
+.managesub.dark .plannameoptions {
+  background-color: #1c1c24;
+  outline: none;
+  color: white;
+}
+
+.startdate,
+.enddate {
+  font-family: "Switzer Regular";
+  background-color: white;
+  color: #25282b;
+  font-size: 15px;
+}
+.managesub.dark .startdate,
+.managesub.dark .enddate {
+  font-family: "Switzer Regular";
+  background-color: #1c1c24;
+  border-color: #343434;
+  color: white;
+  font-size: 15px;
+}
+
+.cancelbtns {
+  background-color: rgb(255, 56, 56);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 6px;
+}
+.cancelbtns:hover {
+  background-color: rgb(208, 30, 30);
+}
+.downloadbtns {
+  background-color: #066c51;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.downloadbtns:hover {
+  background-color: #03533d;
+}
+.checklabel {
+  color: #25282b;
+}
+.managesub.dark .checklabel {
+  color: #919191;
+}
+
+.managesub.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  filter: invert(0.8);
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .tabresdate {
+    width: 10%;
+  }
+  .tabresplan {
+    width: 18%;
+  }
+  .subthead {
+    font-family: "Switzer Regular";
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13.88px;
+  }
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1024px) {
+  .subthead {
+    font-family: "Switzer Regular";
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13.88px;
+  }
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .tabresdate {
+    width: 30%;
+  }
+  .tabresplan {
+    width: 35%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 820px) {
+  .tabresdate {
+    width: 30%;
+  }
+
+  .subthead {
+    font-family: "Switzer Regular";
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13.88px;
+  }
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 432px) {
+  .managesubscriberdrop,
+  .mangesubscriptiondropdata {
+    display: none;
+  }
+}
+
+@media (max-width: 431px) {
+  .managesubresponsive {
+    display: none;
+  }
+  .slnumbermob {
+    width: 0%;
+  }
+  .managesubscriberdrop {
+    margin-left: auto;
+    width: 10%;
+  }
+  .managesubnamemob {
+    padding-left: 15px;
+    width: 30%;
+  }
+  .managesubcompanynamemob {
+    width: 45%;
+  }
+  .mangesubscriptiondropdata {
+    background-color: #dcdcdc;
+    margin-top: 15px;
+    padding: 5px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: 18px;
+  }
+  .managesub.dark .mangesubscriptiondropdata {
+    background-color: #1c1c24;
+  }
+  .mangesubscriptiondropdata.active {
+    background-color: #254396;
+  }
+  .managesub.dark .mangesubscriptiondropdata.active {
+    background-color: #1e84af;
+  }
+  .managesub.dark .mobexpiredate {
+    color: white;
+  }
+  .downarrowmanagesub {
+    width: 10px;
+    height: 10px;
+  }
+  .downarrowmanagesub {
+    transition: transform 0.3s ease;
+  }
+  .downarrowmanagesub.rotated {
+    transform: rotate(180deg);
+  }
+  .subrows.no-border {
+    border-bottom: none;
+  }
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 13px;
+    line-height: 18px;
+    color: #677487;
+  }
+ .submobresicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+  .bar {
+    width: 10px;
+    height: 10px;
+  }
+  .dropsubdata {
+    margin-top: 5px;
+  }
+  .managesub.dark .subrows:hover {
+    background-color: transparent;
+  }
+  .slnumbermob {
+    padding: 0px 16px;
+  }
+  .subrows:hover {
+    background-color: transparent;
+  }
+  .managesub.dark .dropdown-row .dropdownlist {
+    border-bottom: 1px solid #343434;
+  }
+  .managesub.dark .subrows.no-border {
+    border-bottom: none;
+  }
+  .managesub.dark .dropdown-row:last-child td {
+    border: none;
+  }
+  .managesub .excsv {
+    width: 40%;
+    margin-top: 31px;
+  }
+  .subthead {
+    font-family: "Switzer Regular";
+    font-weight: 400;
+    color: #677487;
+    font-size: 11px;
+    line-height: 13.88px;
+  }
+}
+
+@media (max-width: 400px) {
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 12px;
+    line-height: 18px;
+    color: #677487;
+  }
+  .managesubnamemob {
+    padding-left: 10px;
+  }
+  .mobheads {
+    font-size: 11px;
+  }
+  .managesub .excsv {
+    width: 45%;
+    margin-top: 31px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 390px) {
+  .managesubnamemob {
+    padding-left: 10px;
+  }
+  .subthead {
+    font-family: "Switzer Regular";
+    font-weight: 400;
+    color: #677487;
+    font-size: 11px;
+    line-height: 13.88px;
+  }
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 11px;
+    line-height: 18px;
+    color: #677487;
+  }
+  .mobheads {
+    font-size: 10px;
+  }
+  .selectsubhead {
+    font-size: 13px;
+  }
+  .radio-boxes {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #c8c8c8;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .checklabel {
+    font-size: 12px;
+  }
+}
+@media (max-width: 379px) {
+  .subthead {
+    font-family: "Switzer Regular";
+    font-weight: 400;
+    color: #677487;
+    font-size: 10px;
+    line-height: 13.88px;
+  }
+  .subbody {
+    font-family: "Switzer Regular";
+    font-size: 11px;
+    line-height: 18px;
+    color: #677487;
+  }
+  .mobexpiredate {
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    color: #677487;
+  }
+  .bar {
+    width: 9px;
+    height: 9px;
+  }
+  .managesubnamemob {
+    padding-left: 8px;
+  }
+  .managesub .excsv {
+    width: 55%;
+    margin-top: 31px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,98 @@
+.viewmanualhead {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    color: white;
+}
+
+.viewmanuallabels {
+    font-family: 'Switzer Light' !important; 
+    font-size: 16px;
+    color: #AAAAAA;
+    padding-bottom: 6px;
+}
+
+.viewmanuasdata {
+    font-family: 'Switzer Light';
+    font-size: 18px;
+    color: white;
+}
+
+.click-view-file-text {
+    font-family: 'Switzer Light';
+    font-size: 18px;
+    color: #1E84AF;
+}
+
+.request-correction-btn {
+    border: 1px solid #1E84AF;
+    border-radius: 6px;
+    padding: 20px;
+    height: 49px;
+    font-family: 'Switzer Light';
+    font-size: 16px;
+    color: #1E84AF;
+    line-height: 0px;
+}
+
+
+.request-correction-btn:hover {
+    background-color: #1E84AF;
+    color: white;
+}
+
+.review-submit-btn {
+    height: 49px;
+    font-family: 'Switzer Light';
+    font-size: 16px;
+    line-height: 0px;
+    color: white;
+}
+
+.review-submit-btn:hover {
+    background-color: #106083;
+}
+
+.correction-inputs {
+    font-family: 'Switzer Light';
+    font-size: 16px;
+}
+
+.history-head {
+    font-family: 'Switzer Medium';
+    font-size: 22px;
+}
+
+.from-to-time {
+    font-family: 'Switzer Light'; 
+    font-size: 12px;
+}
+
+.history-content {
+    font-family: 'Switzer Light'; 
+    font-size: 16px;
+}
+
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #1C1C24;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4A4A57;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #6E6E80;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4A4A57 #1C1C24;
+}

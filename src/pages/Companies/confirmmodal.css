@@ -1,0 +1,76 @@
+/* modal.css */
+
+.modal-overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #25282b;
+  border-radius: 8px;
+  padding: 20px;
+  width: 414px;
+  height: 346px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.modal-contents.dark .confirmations {
+  color: white;
+}
+.modals.dark {
+  background-color: #1c1c24;
+}
+
+.confirmations {
+  font-family: "Switzer Light";
+  font-size: medium;
+}
+
+.modal-contents {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-actionss {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-cancels,
+.btn-confirms {
+  padding: 8px 16px;
+  border: none;
+  font-family: "Switzer Light";
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cancels {
+  background-color: #AAAAAA;
+  color: white;
+}
+
+.btn-confirms {
+  background-color: #F9291F;
+  color: white;
+}
+
+.btn-cancels:hover {
+  background-color: #858585;
+}
+.btn-confirms:hover {
+  background-color: #b80900;
+}

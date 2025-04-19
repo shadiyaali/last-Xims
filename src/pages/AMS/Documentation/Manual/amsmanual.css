@@ -1,0 +1,7 @@
+.ams-add-plus {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(98%) saturate(637%) hue-rotate(356deg) brightness(98%) contrast(99%);
+}
+
+.add-manual-btn:hover .ams-add-plus {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(243deg) brightness(104%) contrast(101%);
+}

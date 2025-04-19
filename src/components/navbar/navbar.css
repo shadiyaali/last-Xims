@@ -1,0 +1,919 @@
+.navbar {
+  position: sticky;
+  z-index: 50;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 0px 16px;
+}
+
+.span1 {
+  font-family: "Switzer Regular";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.span2 {
+  font-family: "Switzer Regular";
+  font-size: 18px;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icons {
+  height: 46px;
+}
+
+/* Divider between settings and profile */
+.divider {
+  height: 32px; /* Adjust the height for alignment */
+  width: 1px;
+  background-color: #e9e9e9; /* Light gray */
+  margin: 0 8px; /* Add some space between elements */
+}
+
+.span3 {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 16px;
+  color: #25282b;
+}
+
+.span4 {
+  font-family: "Switzer Light";
+  font-size: 12px;
+}
+
+.dashboardicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.imgdashicon {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(45%) saturate(200%)
+    hue-rotate(180deg) brightness(85%) contrast(95%);
+}
+
+/* Dropdown menu initial state */
+.dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px); /* Initially translate it slightly up */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  background-color:#ffff;
+  border-color: #e9e9e9;
+}
+
+/* Dropdown menu when it is visible */
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0); /* When shown, translate to normal position */
+  visibility: visible;
+}
+
+/* Dark Theme */
+.toggle-theme-btn {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Icon Styles */
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Define a class to apply the animation */
+.theme-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.rotate {
+  animation: rotateIcon 0.5s ease-in-out;
+}
+
+.navbar.dark {
+  background-color: #13131a;
+  border-bottom: 1px solid #343434;
+}
+
+.span2.light {
+  color: #25282b;
+}
+
+.span2.dark {
+  color: white;
+}
+
+.icon-button.dark {
+  border: 1.6px solid #343434;
+}
+
+.divider.dark {
+  background-color: #343434;
+  width: 1.6px;
+}
+.span3.dark {
+  color: white;
+}
+
+.chngepaswd {
+  color: #25282b;
+  font-family: "Switzer Regular";
+}
+
+.chngepaswd:hover {
+  background-color: #f5f5f5;
+}
+.logoutbtn {
+  color: #F9291F;
+  font-family: "Switzer Regular";
+}
+.logoutbtn:hover {
+  background-color: #f5f5f5;
+}
+
+.bellicon.dark img,
+.settingicon.dark img,
+.toggle-theme-btn.dark img {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%)
+    hue-rotate(180deg) brightness(105%) contrast(100%);
+}
+
+.dropdown-menu.dark {
+  background-color: #1c1c24;
+  border-color: #343434;
+}
+
+.dropdown-menu.dark .chngepaswd {
+  color: white;
+}
+.dropdown-menu.dark .chngepaswd:hover {
+  background-color: rgb(14, 14, 14);
+}
+.dropdown-menu.dark .logoutbtn:hover {
+  background-color: rgb(14, 14, 14);
+}
+
+.dropdown-menu.light .change-profile {
+  color: #13131a;
+}
+
+/* Smooth rotation for the dropdown icon */
+.rotate-180 {
+  transform: rotate(360deg);
+  transition: transform 0.3s ease;
+}
+
+.close-dropdown-btn {
+  margin-top: 61px;
+  margin-right: 16px;
+}
+
+.navfooter {
+  font-family: "Technor Regular";
+  color: #52d3d8;
+  font-size: 14px;
+}
+.navfooters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  position: fixed;
+  bottom: 106px;
+  width: 100%;
+}
+.dropdown-menu.dark .closeicon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(93%) saturate(29%)
+    hue-rotate(129deg) brightness(106%) contrast(110%);
+}
+.dropdown-menu.dark .dropiconsmenu {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(14%) saturate(609%)
+    hue-rotate(176deg) brightness(96%) contrast(82%);
+}
+.dropdown-menu.dark .sidebarmenustext {
+  color: #677487;
+  border-color: #343434;
+}
+.dropdown-menu.dark .subscriber-dropdown {
+  border-color: #343434;
+}
+.dropdown-menu.dark .sidebarmenustexts {
+  color: #677487;
+}
+.dropdown-menu.dark .navdropicon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(21%) saturate(354%)
+    hue-rotate(176deg) brightness(95%) contrast(93%);
+}
+ul li.active {
+  color: #1e4da1; /* Change text color to blue for the active menu item */
+}
+.dropdown-menu.dark ul li.active {
+  color: #1e84af; /* Change text color to blue for the active menu item */
+}
+ul li.active .dropiconsmenu,
+ul li.active .navdropicon {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(68%) saturate(1847%)
+    hue-rotate(203deg) brightness(90%) contrast(92%);
+}
+.dropdown-menu.dark ul li.active .dropiconsmenu,
+.dropdown-menu.dark ul li.active .navdropicon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(42%) saturate(1062%)
+    hue-rotate(155deg) brightness(88%) contrast(83%);
+}
+.dropdown-menu.dark .desktopprofileicon,
+.dropdown-menu.dark .desktopchangepswdimg {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(25%) saturate(0%)
+    hue-rotate(308deg) brightness(110%) contrast(101%);
+}
+
+.desktoplogoutimg {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(6271%) hue-rotate(346deg) brightness(95%) contrast(107%);
+}
+
+.admin-profile-settings-head {
+  font-family: 'Switzer SemiBold';
+  font-size: 16px;
+}
+
+.dropdown-menu.light .admin-profile-settings-head {
+  color: #25282b;
+  border-color: #e9e9e9;
+}
+
+.dropdown-menu.light .admin-photo-upload {
+  background-color: rgb(252, 252, 252);
+  border: 1px solid #b8b8b8;;
+}
+.dropdown-menu.light .admin-photo-img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(738%) hue-rotate(169deg) brightness(95%) contrast(87%); 
+}
+.dropdown-menu.light .admin-username {
+  color: #25282B;
+}
+.dropdown-menu.light .chngepaswd,  .dropdown-menu.light .logoutbtn{
+  background-color: #fafafa;
+}
+.dropdown-menu.light .chngepaswd:hover,  .dropdown-menu.light .logoutbtn:hover{
+  background-color: #f3f2f2;
+}
+
+.admin-username {
+  font-family: 'Switzer Regular';
+  font-size: 16px;
+  color: white;
+}
+
+.admin-useremail {
+  font-family: 'Switzer Regular';
+  font-size: 12px;
+  color: #6D6D6D;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 500px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.dropdown-content {
+  animation: slideUp 0.5s ease forwards;
+}
+
+.dropdown-content.show {
+  animation: slideDown 0.5s ease forwards;
+}
+
+
+@media (min-width: 821px) and (max-width: 1024px) {
+  .navbaritem {
+    display: flex;
+  }
+  .navbar {
+    padding: 0px 13px;
+  }
+  .span1 {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .span2 {
+    font-size: 15px;
+  }
+  .span3 {
+    font-size: 13px;
+  }
+  .span4 {
+    font-size: 10px;
+  }
+  .profileicon {
+    width: 37px;
+    height: 37px;
+    margin-right: 0.5rem;
+  }
+  .divider {
+    height: 35px;
+  }
+  .settingicon {
+    width: 37px;
+    height: 37px;
+  }
+  .bellicon {
+    width: 37px;
+    height: 37px;
+  }
+  .toggle-theme-btn {
+    width: 37px;
+    height: 37px;
+}
+
+
+}
+
+@media (min-width: 767px) and (max-width: 820px) {
+  .navbar {
+    padding: 0px 10px;
+  }
+  .navbaritem {
+    display: flex;
+  }
+  .span1 {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .span2 {
+    font-size: 15px;
+  }
+  .span3 {
+    font-size: 13px;
+  }
+  .span4 {
+    font-size: 10px;
+  }
+  .profileicon {
+    width: 35px;
+    height: 35px;
+    margin-right: 0.5rem;
+  }
+  .divider {
+    height: 30px;
+  }
+  .settingicon {
+    width: 35px;
+    height: 35px;
+  }
+  .bellicon {
+    width: 35px;
+    height: 35px;
+  }
+  .toggle-theme-btn {
+    width: 35px;
+    height: 35px;
+}
+}
+
+@media (min-width:432px) and (max-width:766px) {
+  .adminname  {
+    display: flex;
+  }
+  .span3 {
+    font-size: 13px;
+  }
+  .span4 {
+    font-size: 10px;
+  }
+  .profileicon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+  }
+  .settingicon, .bellicon, .toggle-theme-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .span1 {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .span2 {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 432px) {
+  .navlogo,
+  .dashboardicon,
+  .sidebarmenus,
+  .navfooters {
+    display: none;
+  }
+}
+
+@media (max-width: 431px) {
+  .navbar {
+    height: 90px;
+    /* width: 100%; */
+    max-width: calc(100vw - 0px);
+    border-bottom: none;
+    box-shadow: 1px 1px 50px rgba(105, 105, 105, 0.1);
+  }
+  .navfooters {
+    max-width: calc(100vw - 40px);
+  }
+  .span1,
+  .span2,
+  .divider,
+  .adminname,
+  .profileicon,
+  .changpswdlogout,
+  .admin-profile-settings-head {
+    display: none;
+  }
+  .navlogo {
+    width: 161px;
+    transform: translateY(50%);
+  }
+  .icons {
+    transform: translateY(30%);
+  }
+  .bellimg,
+  .settingimg,
+  .imgdashicon,
+  .theme-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .bellicon,
+  .settingicon,
+  .dashboardicon,
+  .toggle-theme-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .navbar.dark .navlogo {
+    filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(0%)
+      hue-rotate(342deg) brightness(110%) contrast(101%);
+  }
+  .bellicon.dark img,
+  .settingicon.dark img,
+  .toggle-theme-btn.dark img,
+  .dashboardicon.dark img {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%)
+      hue-rotate(180deg) brightness(105%) contrast(100%);
+  }
+  .dashboardicon.dark {
+    border: 1.6px solid #343434;
+  }
+  .dropdown-menu {
+    right: -16px;
+    margin-top: -120px;
+    width: 100vw;
+    
+  }
+  /* .sidebarmenus {
+    margin: 15px;
+    margin-top: 0px;
+  } */
+  .dropiconsmenu {
+    width: 20px;
+    height: 20px;
+  }
+  .sidebarmenus img {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(864%)
+      hue-rotate(169deg) brightness(93%) contrast(89%);
+  }
+  .sidebarmenustext {
+    font-family: "Switzer Light";
+    color: #25282b;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin: 0px 15px;
+    border-bottom: 1px solid #25282b;
+  }
+
+  .sidebarmenustext:last-child {
+    border-bottom: none;
+  }
+
+  /* Dynamic styling for dropdowns */
+  .subscribers-open,
+  .subscriptions-open {
+    border-bottom: none; /* Remove border-bottom when dropdown is open */
+  }
+
+  .subscriber-dropdown,
+  .subscription-dropdown {
+    border-bottom: 1px solid #25282b; /* Add border at the bottom of the dropdown */
+    margin: 0px 15px;
+  }
+
+  .sidebarmenustexts {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 20px;
+    color: #25282b;
+  }
+  .sidebarmenus .dropiconsmenu {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(757%)
+      hue-rotate(169deg) brightness(96%) contrast(88%);
+  }
+  .sidebarmenus .navdropicon {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(757%)
+      hue-rotate(169deg) brightness(96%) contrast(88%);
+    width: 12px;
+    height: 6px;
+  }
+  .menubars {
+    margin-top: 5px;
+  }
+  .sidebarmenus {
+    height: 100svh;
+  }
+}
+@media (max-width: 425px) {
+  .dropdown-menu {
+    right: -16px;
+    margin-top: -120px;
+    
+  }
+}
+
+@media (max-width: 421px) {
+  .navbar {
+    height: 73px;
+    width: 100%;
+  }
+  .navlogo {
+    width: 143px;
+    transform: translateY(35%);
+  }
+  .icons {
+    transform: translateY(15%);
+  }
+  .bellimg,
+  .settingimg,
+  .imgdashicon,
+  .theme-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .bellicon,
+  .settingicon,
+  .dashboardicon,
+  .toggle-theme-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .dropdown-menu {
+    right: -16px;
+    margin-top: -120px;
+    
+  }
+}
+@media (max-width: 420px) {
+  .dropdown-menu {
+    right: -16px;
+    margin-top: -120px;
+    height: 105vh;
+    
+  }
+}
+@media (max-width: 415px) {
+  .dropdown-menu {
+    right: -16px;
+  }
+}
+@media (max-width: 410px) {
+  .dropdown-menu {
+    right: -16px;
+  }
+}
+@media (max-width: 405px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 400px) {
+  .navbar {
+    height: 74px;
+    width: 100%;
+  }
+  .navlogo {
+    width: 139px;
+    transform: translateY(27%);
+  }
+  .bellicon,
+  .settingicon,
+  .dashboardicon,
+  .toggle-theme-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .bellimg,
+  .settingimg,
+  .imgdashicon,
+  .theme-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 395px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+  .sidebarmenustexts {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 18px;
+    color: #25282b;
+  }
+}
+@media (max-width: 390px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+  .sidebarmenustexts {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 17px;
+    color: #25282b;
+  }
+}
+@media (max-width: 389px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+
+@media (max-width: 385px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 381px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 378px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+  /* Dynamic styling for dropdowns */
+  .subscribers-open,
+  .subscriptions-open {
+    border-bottom: none; /* Remove border-bottom when dropdown is open */
+  }
+
+  .subscriber-dropdown,
+  .subscription-dropdown {
+    border-bottom: 1px solid #25282b; /* Add border at the bottom of the dropdown */
+  }
+}
+
+@media (max-width: 376px) {
+  .navbar {
+    height: 73px;
+    width: 100%;
+  }
+  .navlogo {
+    width: 120px;
+    transform: translateY(39%);
+  }
+  .bellimg,
+  .settingimg,
+  .imgdashicon,
+  .theme-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .bellicon,
+  .settingicon,
+  .dashboardicon,
+  .toggle-theme-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+  /* Dynamic styling for dropdowns */
+  .subscribers-open,
+  .subscriptions-open {
+    border-bottom: none; /* Remove border-bottom when dropdown is open */
+  }
+
+  .subscriber-dropdown,
+  .subscription-dropdown {
+    border-bottom: 1px solid #25282b; /* Add border at the bottom of the dropdown */
+  }
+  .sidebarmenustext {
+    font-family: "Switzer Light";
+    color: #25282b;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 30px;
+    margin: 0px 15px;
+  }
+  .navfooters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    position: fixed;
+    bottom: 95px;
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 370px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+  /* Dynamic styling for dropdowns */
+  .subscribers-open,
+  .subscriptions-open {
+    border-bottom: none; /* Remove border-bottom when dropdown is open */
+  }
+
+  .subscriber-dropdown,
+  .subscription-dropdown {
+    border-bottom: 1px solid #25282b; /* Add border at the bottom of the dropdown */
+  }
+  .navfooters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    position: fixed;
+    bottom: 90px;
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 361px) {
+  .navbar {
+    height: 73px;
+    width: 100%;
+  }
+  .navlogo {
+    width: 116px;
+    transform: translateY(39%);
+  }
+  .icons {
+    transform: translateY(20%);
+  }
+  .bellimg,
+  .settingimg,
+  .imgdashicon,
+  .theme-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .bellicon,
+  .settingicon,
+  .dashboardicon,
+  .toggle-theme-btn {
+    width: 27px;
+    height: 27px;
+  }
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+  .sidebarmenustext {
+    font-size: 17px;
+    padding-bottom: 20px;
+  }
+  .menubars {
+    margin-top: 15px;
+  }
+  .navfooters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    position: fixed;
+    bottom: 85px;
+    width: 100%;
+  }
+  /* Dynamic styling for dropdowns */
+  .subscribers-open,
+  .subscriptions-open {
+    border-bottom: none; /* Remove border-bottom when dropdown is open */
+  }
+
+  .subscriber-dropdown,
+  .subscription-dropdown {
+    border-bottom: 1px solid #25282b; /* Add border at the bottom of the dropdown */
+  }
+}
+@media (max-width: 360px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 355px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 350px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}
+@media (max-width: 345px) {
+  .dropdown-menu {
+    right: -16px;
+ 
+  }
+}

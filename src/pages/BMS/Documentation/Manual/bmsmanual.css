@@ -1,0 +1,7 @@
+.bms-add-plus {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(50%) saturate(6554%) hue-rotate(280deg) brightness(117%) contrast(123%);
+}
+
+.add-manual-btn:hover .bms-add-plus {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(243deg) brightness(104%) contrast(101%);
+}

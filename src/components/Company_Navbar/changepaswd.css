@@ -1,0 +1,79 @@
+/* Modal Animation Styles */
+@keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translate(0, -20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes modalFadeOut {
+    from {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, -20px);
+    }
+  }
+  
+  @keyframes backdropFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes backdropFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .animate-modal-fade-in {
+    animation: modalFadeIn 0.3s ease forwards, backdropFadeIn 0.3s ease forwards;
+  }
+  
+  .animate-modal-fade-out {
+    animation: modalFadeOut 0.3s ease forwards, backdropFadeOut 0.3s ease forwards;
+  }
+  
+
+  
+  /* Password visibility toggle button */
+  .password-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Loading spinner animation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Success and error message styling */
+  .message-success {
+    background-color: rgba(56, 231, 108, 0.1);
+    border-left: 4px solid #38E76C;
+  }
+  
+  .message-error {
+    background-color: rgba(231, 56, 56, 0.1);
+    border-left: 4px solid #E73838;
+  }

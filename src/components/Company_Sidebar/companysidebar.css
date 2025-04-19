@@ -1,0 +1,27 @@
+.company-main-menus {
+    font-family: 'Switzer Regular';
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+}
+
+
+  .full-form {
+    font-family: 'Switzer Regular';
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+  }
+
+
+  @keyframes expandIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px); /* Move from left */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

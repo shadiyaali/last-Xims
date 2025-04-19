@@ -1,0 +1,66 @@
+.editsub {
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  height: 100%;
+}
+.editsubhead {
+  font-family: "Switzer SemiBold";
+  color: #25282b;
+  font-size: 24px;
+  line-height: 27.77px;
+}
+.editsublabel {
+  font-family: "Switzer Regular";
+  font-size: 14px;
+  line-height: 18.48px;
+  color: #25282b;
+}
+.editsubinput {
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  background-color: transparent;
+  height: 40px;
+  padding: 15px;
+  margin-top: 5px;
+  color: #25282b;
+}
+.editsubinput::placeholder {
+  font-family: "Switzer Regular";
+  color: #72787c;
+  font-size: 14px;
+  line-height: 18.48px;
+}
+.editsubbtn {
+  background-color: #1e4da1;
+  width: 100%;
+  height: 48px;
+  color: white;
+  font-family: "Switzer SemiBold";
+  font-size: 18px;
+  line-height: 23.76px;
+  margin-top: 10px;
+}
+.editsubbtn:hover {
+  background-color: #18366b;
+}
+
+.editsub.dark {
+    border: 1px solid #343434;
+}
+.editsub.dark .editsubhead {
+    color: white;
+}
+.editsub.dark .editsublabel {
+    color: #D4D7DA;
+}
+.editsub.dark .editsubinput {
+  border: 1px solid #343434;
+  color: white;
+}
+
+.editsub.dark .editsubbtn {
+  background-color: #3C3B3B;
+}
+.editsub.dark .editsubbtn:hover {
+  background-color: #2d2d2d;
+}

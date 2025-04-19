@@ -1,0 +1,116 @@
+.list-manual-main {
+    border-radius: 8px;
+}
+
+.list-manual-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    font-style: normal;
+    color: white;
+    line-height: normal;
+}
+
+.serach-input-manual {
+    width: 288px;
+    height: 42px;
+    padding-left: 10px;
+    border: 1px solid #383840;
+    border-radius: 6px;
+    font-family: 'Switzer Light';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.serach-input-manual::placeholder {
+    color: #FFFFFF80;
+}
+
+.add-manual-btn {
+    /* border: 1px solid #858585; */
+    border-radius: 4px;
+    width: auto;
+    height: 42px;
+    padding: 10px;
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    /* color: #858585; */
+}
+
+.add-draft-btn {
+    border-radius: 4px;
+    width: auto;
+    height: 42px;
+    width: 90px;
+    padding: 10px;
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.qms-add-plus {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(3%) saturate(28%) hue-rotate(358deg) brightness(92%) contrast(87%);
+}
+
+.add-manual-btn:hover .qms-add-plus {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7472%) hue-rotate(18deg) brightness(98%) contrast(108%);
+}
+
+.add-manual-theads {
+    color: #AAAAAA;
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.add-manual-datas {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.total-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.swipe-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: #FFFFFFBF;
+}
+
+.pagin-active {
+    font-family: 'Switzer Regular';
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.pagin-inactive {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: #AAAAAA;
+}
+
+.not-found {
+    font-family: 'Switzer Regular';
+    color: gray;
+}

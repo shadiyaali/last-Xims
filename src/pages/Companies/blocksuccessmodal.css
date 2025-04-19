@@ -1,0 +1,55 @@
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-modal {
+  background-color: white;
+  color: #25282b;
+  border-radius: 8px;
+  padding: 20px;
+  width: 493px;
+  height: 347px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+} 
+
+.success-modal.light .success-dark {
+  display: none;
+}
+.success-modal.dark .success-light {
+  display: none;
+}
+.success-modal.dark .success-messege {
+
+  color: white;
+}
+
+.success-modal.dark {
+  background-color: #1C1C24;
+}
+.success-modal.dark .modal-close-icon {
+  background-color: #24242D;
+}
+.success-modal.dark .close-img {
+  color: white;
+}
+
+.success-messegehead{
+  margin-top: 16px;
+  font-family: 'Switzer SemiBold';
+  font-size:26px;
+  color: #38E76C;
+}
+.success-messege {
+  margin-top: 16px;
+  font-family: 'Switzer Regular';
+  font-size: 16px;
+}

@@ -1,0 +1,16 @@
+.view-employee-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+
+.view-employee-label {
+    font-family: 'Switzer Light';
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.view-employee-data {
+    font-family: 'Switzer Regular';
+    font-size: 18px;
+    color: white;
+}

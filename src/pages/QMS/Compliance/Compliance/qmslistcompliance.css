@@ -1,0 +1,17 @@
+.list-compliance-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+
+.qms-list-compliance-thead {
+    font-family: 'Switzer Light'; 
+    font-size: 14px;
+    font-weight: 400;
+    color: #AAAAAA;
+}
+
+.qms-list-compliance-data {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    color: white;
+}

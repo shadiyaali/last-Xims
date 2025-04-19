@@ -1,0 +1,1090 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-color: #e9e9e9;
+}
+
+.cmpilisthead {
+  padding: 20px;
+  font-family: "Switzer SemiBold";
+  font-size: 24px;
+  line-height: 27.77px;
+  color: #25282b;
+}
+
+.search {
+  width: 266px;
+  height: 40px;
+  padding: 0px 10px;
+  border-color: #e9e9e9;
+}
+
+.search::placeholder {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+  color: #898989;
+}
+
+.topbtn {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.addcmpny {
+  width: 169px;
+  height: 40px;
+  color: white;
+  background-color: #1bc194;
+}
+
+.excsv {
+  width: 134px;
+  height: 40px;
+}
+
+.overflow-x-auto {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-auto {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.comhead {
+  height: 52px;
+}
+.tblrows {
+  height: 75px;
+}
+
+.c_logo {
+  padding: 0;
+}
+
+.toggle {
+  width: 27px;
+  /* height: 15px; */
+}
+
+.bar {
+  width: 11px;
+  height: 11px;
+}
+
+.translate-x-2 {
+  transform: translateX(0.6rem);
+  background-color: white;
+}
+
+.translate-x-0 {
+  transform: translateX(-0.1rem);
+  background-color: white;
+}
+
+.pagination {
+  font-family: "Switzer Regular";
+
+  line-height: 18.48px;
+  font-size: 14px;
+  color: rgb(138, 148, 162);
+}
+.pagenocom {
+  font-family: "Switzer Regular";
+  font-weight: 500;
+  font-size: 13px;
+  color: #1e4da1;
+  text-decoration-line: underline;
+}
+.paginationmob.dark .pagenocom {
+  color: white;
+}
+.pagenonotcom {
+  color: #898989;
+  font-size: 13px;
+}
+.paginationmob.dark .pagenonotcom {
+  color: #898989;
+}
+
+.companieslist {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.listheads {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 30px;
+  border-top: 1px solid #e9e9e9;
+}
+.companiesthead {
+  font-family: "Switzer Regular";
+  font-weight: 400;
+  font-size: 12px;
+  color: #677487;
+  line-height: 13.88px;
+  height: 21px;
+  padding: 10px 15px;
+}
+
+.companiesdata {
+  padding: 15px 15px;
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  text-align: start;
+
+  line-height: 18px;
+  color: #677487;
+}
+.companiesdatasl {
+  padding: 15px 15px;
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  text-align: center;
+
+  line-height: 18px;
+  color: #677487;
+}
+.comperdata {
+  padding-left: 0px;
+}
+
+.blockk {
+  width: 55px !important;
+  text-align: center;
+}
+.blocks {
+  padding: 2px 6px;
+  font-family: "Switzer Light";
+  font-weight: 400;
+}
+.companiestheadlogo {
+  font-family: "Switzer Regular";
+  font-weight: 400;
+  font-size: 12px;
+  color: #677487;
+  line-height: 21px;
+}
+.compnyname {
+  width: 350px;
+}
+
+.compnyemail {
+  width: 230px;
+}
+.compnyper {
+  padding: 10px 10px 10px 0px;
+}
+.tblrows {
+  border-bottom: 1px solid #e9e9e9;
+}
+.tblrows:hover {
+  background-color: #f3f4f6;
+}
+.tblrows:last-child {
+  border-bottom: none;
+}
+.companiesactivestate {
+  background-color: #dcfce7;
+  color: #24d6a5;
+}
+.companiesblockstate {
+  background-color: #fee2e2;
+  color: #f36643;
+}
+
+.mobhead {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13.88px;
+  padding-bottom: 3px;
+  color: #677487;
+}
+.mobdata {
+  font-family: "Switzer Regular";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #25282b;
+}
+/* .mobcmpyadmin,
+.mobcmpyphone {
+  padding-top: 5px;
+} */
+.mobemaildiv {
+  padding-top: 10px;
+}
+
+.mobactions {
+  padding-top: 15px;
+}
+.comadminname {
+  width: 150px;
+}
+.mobicon {
+  margin-top: 5px;
+}
+.mobviewicon {
+  margin-top: 8px;
+}
+.topbtns {
+  display: flex;
+}
+
+.toggleblock {
+  background-color: #f36643;
+}
+.toggleactive {
+  background-color: #1bc194;
+}
+
+.comhead {
+  background-color: #f7f7f7;
+  border-color: #e9e9e9;
+}
+
+.main.dark {
+  border-color: #343434;
+}
+
+.main.dark .cmpilisthead {
+  color: white;
+}
+
+.main.dark .search {
+  background-color: #13131a;
+  border-color: #343434;
+  color: #677487;
+}
+
+.main.dark .search::placeholder {
+  color: #677487;
+}
+
+.main.dark .listserachicon {
+  filter: brightness(0) saturate(100%) invert(49%) sepia(22%) saturate(386%)
+    hue-rotate(176deg) brightness(86%) contrast(82%);
+}
+
+.main.dark .addcmpny {
+  color: #0d0d0d;
+  background-color: #1fd8a3;
+}
+.main.dark .addcmpny:hover {
+  background-color: #11a87d;
+}
+
+.main.dark .addcmpny img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(3%) saturate(7489%)
+    hue-rotate(111deg) brightness(98%) contrast(91%);
+}
+
+.main.dark .listheads {
+  border-top: 1px solid #232323;
+}
+
+.main.dark .comhead {
+  background-color: #1c1c24;
+}
+
+.main.dark .companiesthead {
+  color: #adadad;
+}
+
+.main.dark .companiestheadlogo {
+  color: #adadad;
+}
+
+.main.dark .tblrows {
+  border-bottom: 1px solid #343434;
+}
+.main.dark .tblrows:last-child {
+  border-bottom: none;
+}
+
+.main.dark .comhead {
+  border-color: #232323;
+}
+
+.main.dark .tblrows:hover {
+  background-color: rgb(14, 14, 14);
+}
+
+.main.dark .companiesdata,
+.main.dark .companiesdatasl {
+  color: white;
+}
+
+.main.dark .companiesactivestate {
+  background-color: #36ddae1c;
+  color: #36ddae;
+}
+
+.main.dark .companiesblockstate {
+  background-color: #e13f231c;
+  color: #e13f23;
+}
+
+.main.dark .darkthemebtn {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(120deg) brightness(106%) contrast(101%);
+}
+
+.main.dark .toggleblock {
+  background-color: #e13f23;
+}
+
+.main.dark .toggleactive {
+  background-color: #1ed7a6;
+}
+
+.main.dark .translate-x-2 {
+  background-color: #0d0d0d;
+}
+.paginationmob .arrowblocked {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(4%) saturate(345%)
+    hue-rotate(177deg) brightness(107%) contrast(88%);
+}
+.paginationmob.arrowactived {
+  color: #25282b;
+}
+
+.paginationmob.dark .arrowblocked {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(9%) saturate(906%)
+    hue-rotate(169deg) brightness(91%) contrast(82%);
+}
+.paginationmob.dark .arrowactived {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(27%) saturate(1134%)
+    hue-rotate(176deg) brightness(91%) contrast(87%);
+}
+
+.activesubplantext {
+  background-color: #daf8ff;
+  border-radius: 3px;
+  margin-top: 5px;
+  padding: 2px 7px;
+}
+.activesubplantexttext {
+  color: #12809f;
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  line-height: 16px;
+}
+.expire-on-text {
+  border-radius: 3px;
+  color: #fea354;
+  background-color: #ffefe2;
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  line-height: 16px;
+  padding: 3px 7px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expired-text {
+  border-radius: 3px;
+  color: #ff7f7f;
+  background-color: #fef2f2;
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
+  padding: 3px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main.dark .activesubplantext {
+  background-color: #022c37;
+}
+.main.dark .expire-on-text {
+  background-color: #2d1501;
+}
+.main.dark .expired-text {
+  background-color: #e13f231c;
+  color: #b3331d;
+}
+.main.dark .activesubplantexttext {
+  color: #23b8e1;
+}
+.main.dark .expire-on-text {
+  color: #e17c23;
+}
+.inactivesubtext {
+  width: fit-content;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: #fef2f2;
+  text-align: left;
+  padding: 2px 7px;
+  margin-top: 5px;
+}
+.inactivesubtexttext {
+  color: #ff7f7f;
+  font-family: "Switzer Regular";
+  font-size: 12px;
+  line-height: 16px;
+}
+.main.dark .inactivesubtext {
+  background-color: #e13f231c;
+}
+.main.dark .inactivesubtexttext {
+  color: #b3331d;
+}
+
+.paginationnorecent {
+  color: #1e4da1;
+}
+.paginationmob.dark .paginationnorecent {
+  color: white;
+}
+
+
+
+@media (min-width: 1100px) {
+  .dropdown-imgtab {
+    display: none;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1100px) {
+  .tabview,
+  .cmpyadminnametab {
+    display: none;
+  }
+  .navcomitems {
+    display: flex;
+    margin: auto;
+    gap: 40px;
+  }
+  .cmpilisthead {
+    padding-bottom: 0px;
+  }
+  .dropheadtab {
+    justify-self: end;
+    padding-right: 60px;
+  }
+    .bgarrowtab {
+      background-color: #dedede;
+      border-radius: 100%;
+      width: 23px;
+      height: 23px;
+      margin: 30px 20px 20px 20px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+  .bgarrowtab.active {
+    background-color: #254396;
+  }
+  .dropdown-imgtab {
+    transition: transform 0.3s ease;
+    width: 10px;
+  }
+  .dropdown-imgtab.rotated {
+    transform: rotate(180deg);
+  }
+  .companiesdata {
+    font-size: 11px;
+  }
+  .dropdownlist {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .mobactions {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .dropdown-row .dropdownlist {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .tblrows.no-border {
+    border-bottom: none;
+  }
+  .companiesdata {
+    padding-right: 0px;
+  }
+  .mobdata {
+    font-size: 12px;
+  }
+  .mobhead {
+    font-size: 11px;
+  }
+  .recent-activities .accards {
+    margin: 10px 0px;
+  }
+
+  .companiestheadlogo {
+    width: 100px;
+  }
+  .inactivesubtexttext, .activesubplantexttext, .expire-on-text, .expired-text {
+    font-size: 10px; 
+}
+.compnyname, .companydataname {
+  width: 350px;
+  padding-left: 25px;
+}
+.main.dark .bgarrowtab {
+  background-color: #1c1c24;
+}
+.main.dark .bgarrowtab.active  {
+  background-color: #1e84af;
+}
+.main.dark .tblrows:hover {
+  background-color: transparent;
+}
+.mobhead {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13.88px;
+  padding-bottom: 3px;
+  color: #677487;
+}
+.main.dark .mobhead {
+  color: #677487;
+}
+.main.dark .mobdata {
+  color: white;
+}
+.mobtoggleblock {
+  background-color: #f36643;
+}
+.mobtoggleactive {
+  background-color: #1bc194;
+}
+.mobstatusactive {
+  background-color: #dcfce7;
+  color: #24d6a5;
+}
+.mobstatusInactive {
+  background-color: #fee2e2;
+  color: #F36643;
+}
+.main.dark .mobstatusactive {
+  background-color: #36ddae1c;
+  color: #36ddae;
+}
+.main.dark .mobstatusInactive {
+  background-color: #e13f231c;
+  color: #e13f23;
+}
+.main.dark .darkthememob  {
+  filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(0%) hue-rotate(265deg) brightness(105%) contrast(108%);
+}
+.main.dark .dropdown-row .dropdownlist {
+  border-bottom: 1px solid #343434;
+}
+.tblrows.no-border {
+  border-bottom: none;
+}
+.main.dark .tblrows.no-border {
+  border-bottom: none;
+}
+.dropdown-row:last-child td {
+  border: none;
+}
+.main.dark .dropdown-row:last-child td {
+  border: none;
+}
+.mobresactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 501px) and (max-width: 769px) {
+  .search {
+    width: 200px;
+  }
+}
+
+@media (min-width: 432px) {
+  .drophead,
+  .bgarrow,
+  .addcmpymob {
+    display: none;
+  }
+}
+
+@media (max-width: 431px) {
+  .nodisplayhead,
+  .dropheadtab,
+  .nodisplaydata,
+  .addnewcmpy,
+  .dropdown-imgtab {
+    display: none;
+  }
+  .navcomitems {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .topbtns {
+    display: flex;
+  }
+  .cmpilisthead {
+    padding-bottom: 0px;
+  }
+  .search {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .listserachicon {
+    translate: 0px -6px;
+  }
+  .excsv {
+    order: 2;
+    width: 100%;
+  }
+  .addcmpny {
+    order: 1;
+    width: 100%;
+  }
+  .companiestheadlogo {
+    width: 85px;
+    height: 28.81px;
+  }
+  .comhead {
+    height: 32px;
+  }
+  .compnyname {
+    width: 60%;
+    padding: 10px 30px;
+  }
+  .drophead {
+    justify-self: end;
+    padding-right: 20px;
+  }
+  .bgarrow {
+    background-color: #dedede;
+    border-radius: 100%;
+    width: 23px;
+    height: 23px;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  .bgarrow.active {
+    background-color: #254396;
+  }
+
+  .dropdown-img {
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-img.rotated {
+    transform: rotate(180deg);
+  }
+  .dropdown-row .dropdownlist {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .dropdown-row:last-child td {
+    border: none;
+  }
+  .tblrows {
+    height: 75px;
+  }
+  .tblrows.no-border {
+    border-bottom: none;
+  }
+  .main.dark .tblrows.no-border {
+    border-bottom: none;
+  }
+  .companiesdatasl {
+    font-family: "Switzer Regular";
+    padding-right: 25px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #25282b;
+  }
+  .companydataname {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #25282b;
+    padding-right: 5px;
+  }
+  .dropdownlist {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .companiestheadsl {
+    padding-right: 25px;
+  }
+  .pagination,
+  .pageswipe {
+    font-size: 13px;
+  }
+  .companydataname {
+    padding-left: 15px;
+  }
+  .compnyname {
+    padding: 10px 22px;
+  }
+  .companiestheadsl {
+    padding-right: 20px;
+  }
+  .companiesdatasl {
+    padding-right: 15px;
+  }
+  .paginationmob {
+    margin-bottom: 5rem;
+  }
+  .main.dark .tblrows:hover {
+    background-color: transparent;
+  }
+  .main.dark .bgarrow {
+    background-color: #1c1c24;
+  }
+  .main.dark .bgarrow.active {
+    background-color: #1e84af;
+  }
+  .main.dark .mobdata {
+    color: white;
+  }
+  .mobstatusactive {
+    background-color: #dcfce7;
+    color: #24d6a5;
+  }
+  .mobstatusInactive {
+    background-color: #fee2e2;
+    color: #F36643;
+  }
+  .main.dark .mobstatusactive {
+    background-color: #36ddae1c;
+    color: #36ddae;
+  }
+  .main.dark .mobstatusInactive {
+    background-color: #e13f231c;
+    color: #e13f23;
+  }
+  .main.dark .darkthememob img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(7500%)
+      hue-rotate(205deg) brightness(123%) contrast(93%);
+  }
+  .mobtoggleblock {
+    background-color: #f36643;
+  }
+  .mobtoggleactive {
+    background-color: #1bc194;
+  }
+  .main.dark .mobtoggleblock {
+    background-color: #e13f23;
+  }
+  .main.dark .mobtoggleactive {
+    background-color: #1ed7a6;
+  }
+  .main.dark .dropdown-row .dropdownlist {
+    border-bottom: 1px solid #343434;
+  }
+  .main.dark .dropdown-row:last-child td {
+    border: none;
+  }
+  .activesubplantext {
+    background-color: #daf8ff;
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 2px 7px;
+  }
+  .activesubplantexttext {
+    color: #12809f;
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .expire-on-text {
+    background-color: #ffefe2;
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 2px 7px;
+  }
+  .expire-on-text {
+    color: #fea354;
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .expired-text {
+    background-color: #fef2f2;
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 2px 7px;
+  }
+  .expired-text {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .inactivesubtexttext {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .activeplan {
+    gap: 4px;
+  }
+  .tblrows:hover {
+    background-color: transparent;
+  }
+    .mobresactions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 416px) {
+  .companydataname {
+    padding-left: 15px;
+  }
+  .compnyname {
+    padding: 10px 15px;
+  }
+  .companiestheadsl {
+    padding-right: 20px;
+  }
+  .companiesdatasl {
+    padding-right: 13px;
+  }
+  .mobdata {
+    font-size: 13px;
+  }
+  .paginationmob {
+    margin-bottom: 4rem;
+  }
+  .companiestheadlogo {
+    width: 70px;
+    height: 28px;
+  }
+}
+@media (max-width: 406px) {
+  .activesubplantexttext {
+    color: #12809f;
+    font-family: "Switzer Regular";
+    font-size: 9px;
+    line-height: 16px;
+  }
+  .expire-on-text {
+    color: #fea354;
+    font-family: "Switzer Regular";
+    font-size: 9px;
+    line-height: 16px;
+  }
+  .expired-text {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 9px;
+    line-height: 16px;
+  }
+  .inactivesubtexttext {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 9px;
+    line-height: 16px;
+  }
+  .companiestheadlogo {
+    width: 60px;
+  }
+}
+
+@media (max-width: 401px) {
+  .mobdata {
+    font-size: 13px;
+  }
+  .companydataname {
+    font-size: 13px;
+  }
+  .paginationmob {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .mobdata {
+    font-size: 12px;
+  }
+  .companydataname {
+    font-size: 12px;
+    padding-left: 16px;
+  }
+  .paginationmob {
+    margin-bottom: 4rem;
+  }
+  .activesubplantexttext {
+    color: #12809f;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .expire-on-text {
+    color: #fea354;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .expired-text {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .inactivesubtexttext {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .companiestheadlogo {
+    width: 22%;
+  }
+}
+@media (max-width: 374px) {
+  .companiestheadlogo {
+    width: 19%;
+  }
+}
+@media (max-width: 364px) {
+  .companiestheadlogo {
+    width: 17%;
+  }
+}
+@media (max-width: 361px) {
+  .companiestheadlogo {
+    width: 17%;
+  }
+}
+@media (max-width: 359px) {
+  .activesubplantexttext {
+    color: #12809f;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .expire-on-text {
+    color: #fea354;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .expired-text {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .inactivesubtexttext {
+    color: #ff7f7f;
+    font-family: "Switzer Regular";
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .companiestheadlogo {
+    width: 16%;
+  }
+}
+
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+} */
+
+/* .modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #eae7e7;
+  color: #333;
+}
+
+.confirm-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+.confirm-btn:hover {
+  background-color: #ec2a2a;
+  color: white;
+} */

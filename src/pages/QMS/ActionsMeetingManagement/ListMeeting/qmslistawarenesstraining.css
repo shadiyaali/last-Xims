@@ -1,0 +1,17 @@
+.list-awareness-training-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    color: white;
+}
+
+.list-awareness-training-thead {
+    font-family: 'Switzer Light'; 
+    font-size: 14px;
+    color: #AAAAAA;
+    font-weight: 400;
+}
+
+.list-awareness-training-datas {
+    font-family: 'Switzer Light'; 
+    font-size: 14px;
+}

@@ -1,0 +1,73 @@
+.addsubplan {
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  height: 100%;
+}
+.addsubplanhead {
+  font-family: "Switzer SemiBold";
+  color: #25282b;
+  font-size: 24px;
+  line-height: 27.77px;
+}
+.addsubplanlabel {
+  font-family: "Switzer Regular";
+  font-size: 14px;
+  line-height: 18.48px;
+  color: #25282b;
+}
+.addsubplaninput {
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  background-color: transparent;
+  height: 40px;
+  padding: 15px;
+  margin-top: 5px;
+  color: #25282b;
+}
+.addsubplaninput::placeholder {
+    font-family: "Switzer Regular";
+    color: #72787C;
+    font-size: 14px;
+    line-height: 18.48px;
+}
+.addsubplanbtn {
+  background-color: #1e4da1;
+  width: 100%;
+  height: 48px;
+  color: white;
+  font-family: "Switzer SemiBold";
+  font-size: 18px;
+  line-height: 23.76px;
+  margin-top: 10px;
+}
+.addsubplanbtn:hover {
+  background-color: #18366b;
+}
+
+
+.addsubplan.dark {
+    border: 1px solid #343434;   
+}
+.addsubplan.dark .addsubplanhead {
+    color: white;
+}
+.addsubplan.dark .addsubplanlabel {
+    color: #D4D7DA;
+}
+.addsubplan.dark .addsubplaninput {
+    border: 1px solid #343434;
+    color: white;
+}
+
+.addsubplan.dark .addsubplanbtn {
+    background-color: #3C3B3B;
+}
+.addsubplan.dark .addsubplanbtn:hover {
+    background-color: #2d2d2d;
+}
+
+.addsubplan.dark input:-webkit-autofill {
+  color: rgb(255, 255, 255) !important; /* White text color */
+  transition: 1000s ease-in-out 0s !important;
+}
+

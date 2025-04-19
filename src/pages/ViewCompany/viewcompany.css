@@ -1,0 +1,289 @@
+.view-company-container {
+  border: 1px solid #E9E9E9;
+  border-radius: 8px;
+  height: auto;
+}
+
+.headercmpy {
+  padding: 20px;
+  font-family: 'Switzer SemiBold';
+  font-size: 24px;
+  line-height: 27.77px;
+  color: #25282B;
+}
+
+.information {
+  background-color: #F7F7F7;
+  margin: 0px 20px 20px 20px;
+  border-radius: 8px;
+}
+.grids {
+  padding: 37px 30px;
+}
+.viewdata {
+  padding-top: 5px;
+  font-family: 'Switzer Light';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #25282B;
+}
+.company-logos{
+  margin-top: 10px;
+  border-radius: 4px;
+  width: 112px;
+}
+.nologo {
+  color: #25282B;
+}
+
+.viewcpmylabels {
+  font-family: 'Switzer Regular';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.51px;
+  color: #677487;
+}
+
+.view-company-container.dark {
+  border: 1px solid #343434;
+}
+.view-company-container.dark .headercmpy {
+  color: white;
+}
+.view-company-container.dark .information {
+  background-color: #1C1C24;
+}
+.view-company-container.dark .viewcpmylabels {
+  color: #ADADAD;
+}
+.view-company-container.dark .viewdata {
+  color: white;
+}
+.view-company-container.dark .nologo {
+  color: white;
+}
+.lefttopsection {
+  border-color: #E9E9E9;
+}
+
+.leftsection {
+  border-color: #E9E9E9;
+}
+.view-company-container.dark .leftsection {
+  border-color: #343434;
+}
+.rightsection {
+  border-color: #E9E9E9;
+}
+.view-company-container.dark .rightsection {
+  border-color: #343434;
+}
+.view-company-container.dark .editicons {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(0%) hue-rotate(347deg) brightness(106%) contrast(106%);
+}
+.view-company-container.dark .deleteicons {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(0%) hue-rotate(347deg) brightness(106%) contrast(106%);
+}
+
+.view-company.dark .outsidehead {
+  color: white;
+}
+.view-company-container.dark .lefttopsection, .view-company-container.dark .mobsecondrow, .view-company-container.dark .mobthirdrow, .view-company-container.dark .mobilefourthrow, .view-company-container.dark .mobilefifththrow {
+  border-color: #343434;
+}
+
+
+
+
+
+@media(min-width:432px){
+  .outsidehead, .mobsecondrow, .mobilethirdrow, .mobilefourthrow , .mobilefifththrow , .mob-com-name {
+    display: none;
+  }
+}
+
+@media(max-width:431px){
+  .insidehead, .rightsection, .mobeditview, .mobdelete, .desktopexpiryview  {
+    display: none;
+  }
+  .grids {
+    padding: 15px 0px;
+  }
+  .information {
+    background-color: transparent;
+    margin: 0px 20px 20px 20px;
+    border-radius: 8px;
+  }
+  .view-company-container.dark .information {
+    background-color: transparent;
+  }
+  .lefttopsection {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+  .company-logos {
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 90px;
+}
+  .viewcomname {
+    text-align: right;
+    /* width: 60%; */
+  }
+  .mobcomlogo {
+    text-align: left;
+  }
+  .mobsecondrow {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+  .phone1{
+    text-align: left;
+  }
+  .phone2 {
+    text-align: right;
+  }
+  .mobthirdrow {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+  .mobadminname {
+    text-align: left;
+  }
+  .mobemailaddress {
+    text-align: right;
+  }
+  .mobilefourthrow {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+  .mobilefifththrow {
+    padding: 24px 0px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+  .mobexpiryrow {
+    text-align: right;
+  }
+  .mobpermissions {
+    padding: 24px 0px;
+  }
+  .viewcpmylabels {
+    font-family: 'Switzer Regular';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18.51px;
+    color: #677487;
+}
+.viewdata {
+  padding-top: 5px;
+  font-family: 'Switzer Light';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: #25282B;
+}
+.com-name-adminname {
+  flex-direction: column;
+}
+.desk-com-name {
+  display: none;
+}
+.mob-viewcomname {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+}
+
+@media(max-width:400px) {
+  .viewcpmylabels {
+    font-family: 'Switzer Regular';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 18.51px;
+    color: #677487;
+}
+.viewdata {
+  padding-top: 5px;
+  font-family: 'Switzer Light';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  color: #25282B;
+}
+}
+
+/* @media(max-width: 431px) {
+  .view-company-container {
+    margin-bottom: 6rem;
+    height: auto;
+  }
+  .grids {
+    gap:auto;
+  }
+  .viewdata {
+    font-size: 17px;
+  }
+  .viewcpmylabels {
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 385px) {
+  .viewdata {
+    font-size: 16px;
+  }
+  .viewcpmylabels {
+    font-size: 14px;
+  }
+  .company-logos{
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 113px;
+  }
+  .companydataname {
+    padding-left: 20px;
+  }
+  .compnyname {
+    padding: 10px 20px;
+  }
+}
+
+@media(max-width: 385px) {
+  .viewdata {
+    font-size: 15px;
+  }
+  .viewcpmylabels {
+    font-size: 13px;
+  }
+}
+@media(max-width: 370px) {
+  .company-logos{
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 112px;
+  }
+}
+
+@media(max-width: 345px) {
+  .viewdata {
+    font-size: 14px;
+  }
+  .viewcpmylabels {
+    font-size: 12px;
+  }
+  .company-logos{
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 112px;
+  }
+} */

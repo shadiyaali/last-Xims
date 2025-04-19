@@ -1,0 +1,683 @@
+.mainsidebar {
+  width: 127px;
+  background-color: #f7f7f7;
+  border-color: #e9e9e9;
+}
+
+.mainsidebar .logo {
+  width: 103.51px;
+  height: 20px;
+  position: relative;
+  top: 40px;
+}
+
+.mainsidebar .item {
+  width: 127px;
+  height: 49px;
+  transition: all 0.3s ease-in-out;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+.mainitems {
+  padding: 8px 0px;
+}
+
+.mainsidebar .item .sideicon {
+  width: 16px;
+  height: auto;
+}
+
+.mainsidebar .spans {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+  color: #677487;
+}
+
+/* Hover State */
+.mainsidebar .item:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.mainsidebar .item:hover .sideicon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(2567%)
+    hue-rotate(209deg) brightness(93%) contrast(96%);
+}
+.mainsidebar.dark .item:hover .sideicon {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(88%) saturate(431%)
+    hue-rotate(152deg) brightness(97%) contrast(93%);
+}
+
+.mainsidebar .item:hover .spans {
+  color: #1e4da1;
+}
+.mainsidebar.dark .item:hover .spans {
+  color: #1e84af;
+}
+
+/* Active State */
+.mainsidebar .item.active {
+  border-right: 3px solid #1e4da1;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainsidebar .item.active .sideicon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(2567%)
+    hue-rotate(209deg) brightness(93%) contrast(96%);
+}
+
+.mainsidebar .item.active .spans {
+  color: #1e4da1;
+}
+.sidebartab {
+  gap: 20px;
+}
+
+.mainsidebar.dark {
+  background-color: #1c1c24;
+  border-right: 1px solid #343434;
+}
+
+.mainsidebar.dark .logo {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(180deg) brightness(105%) contrast(100%);
+}
+
+.mainsidebar.dark .item.active .sideicon {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(88%) saturate(431%)
+    hue-rotate(152deg) brightness(97%) contrast(93%);
+}
+
+.mainsidebar.dark .item.active .spans {
+  color: #1e84af;
+}
+
+.mainsidebar.dark .item.active {
+  border-right: 3px solid #1e84af;
+  border-left: 3px solid transparent;
+}
+
+
+.subscriberdropdownmenus {
+  position: absolute;
+  left: 127px;
+  border: 1px solid #e9e9e9;
+  background-color: #f7f7f7;
+  border-radius: 0px 6px 6px 0px;
+  width: 358px;
+  height: 235px;
+  z-index: 999;
+  padding: 20px;
+  top: 150px;
+}
+.mainsidebar.dark .subscriberdropdownmenus {
+  background-color: #1C1C24;
+  border: 1px solid #343434;
+}
+.subscriptiondropdownmenus {
+  position: absolute;
+  left: 127px;
+  border: 1px solid #e9e9e9;
+  background-color: #f7f7f7;
+  border-radius: 0px 6px 6px 0px;
+  width: 358px;
+  height: 235px;
+  z-index: 999;
+  padding: 20px;
+  top: 235px;
+}
+.mainsidebar.dark .subscriptiondropdownmenus {
+  background-color: #1C1C24;
+  border: 1px solid #343434;
+}
+
+
+.subhead {
+  font-family: "Switzer Medium";
+  font-size: 20px;
+  border-bottom: 1px solid #e9e9e9;
+  color: #25282b;
+  padding-bottom: 20px;
+}
+.mainsidebar.dark .subhead {
+  color: white;
+  border-bottom: 1px solid #383840;
+}
+.subheadss {
+  font-family: "Switzer Medium";
+  font-size: 20px;
+  border-bottom: 1px solid #e9e9e9;
+  color: #25282b;
+  padding-bottom: 20px;
+}
+.mainsidebar.dark .subheadss {
+  color: white;
+  border-bottom: 1px solid #383840;
+}
+
+.addsubbox {
+  width: 153px;
+  height: 130px;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainsidebar.dark .addsubbox {
+  background-color: #24242D;
+}
+.addsubsciptionbox {
+  width: 153px;
+  height: 130px;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainsidebar.dark .addsubsciptionbox {
+  background-color: #24242D;
+}
+
+.managesubbox {
+  width: 153px;
+  height: 130px;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainsidebar.dark .managesubbox {
+  background-color: #24242D;
+}
+.managesubscriptionbox {
+  width: 153px;
+  height: 130px;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainsidebar.dark .managesubscriptionbox {
+  background-color: #24242D;
+}
+.addsubcontent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainsidebar.dark .addsubcontent {
+  background-color: #434362;
+}
+.addsubscriptioncontent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainsidebar.dark .addsubscriptioncontent {
+  background-color: #434362;
+}
+.managesubcontent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainsidebar.dark .managesubcontent {
+  background-color: #434362;
+}
+.managesubscriptioncontent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainsidebar.dark .managesubscriptioncontent {
+  background-color: #434362;
+}
+.addsubimg {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(6%) saturate(18%)
+    hue-rotate(319deg) brightness(93%) contrast(94%);
+  width: 20px;
+  height: 20px;
+}
+.mainsidebar.dark .addsubimg {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(83deg) brightness(108%) contrast(102%);
+}
+.addsubscriptionimg {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(6%) saturate(18%)
+  hue-rotate(319deg) brightness(93%) contrast(94%);
+width: 20px;
+height: 20px;
+}
+.mainsidebar.dark .addsubscriptionimg {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(83deg) brightness(108%) contrast(102%);
+}
+.managesubimg {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(6%) saturate(18%)
+    hue-rotate(319deg) brightness(93%) contrast(94%);
+  width: 20px;
+  height: 20px;
+}
+.mainsidebar.dark .managesubimg {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(83deg) brightness(108%) contrast(102%);
+}
+.managesubscriptionimg {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(6%) saturate(18%)
+  hue-rotate(319deg) brightness(93%) contrast(94%);
+width: 20px;
+height: 20px;
+}
+.mainsidebar.dark .managesubscriptionimg {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(83deg) brightness(108%) contrast(102%);
+}
+.addsubtext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  margin-top: 7px;
+  font-size: 16px;
+  color: #575757;
+  line-height: 20px;
+}
+.mainsidebar.dark .addsubtext {
+  color: #677487;
+}
+.addsubscriptiontext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  margin-top: 7px;
+  font-size: 16px;
+  color: #575757;
+  line-height: 20px;
+}
+.mainsidebar.dark .addsubscriptiontext {
+  color: #677487;
+}
+.managesubtext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  margin-top: 7px;
+  font-size: 16px;
+  color: #575757;
+  line-height: 20px;
+}
+.mainsidebar.dark .managesubtext {
+  color: #677487;
+}
+.managesubscriptiontext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  margin-top: 7px;
+  font-size: 16px;
+  color: #575757;
+  line-height: 20px;
+}
+.mainsidebar.dark .managesubscriptiontext {
+  color: #677487;
+}
+
+.subscribersdiv:hover .subscribersIcon
+{
+  filter: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(2567%)
+    hue-rotate(209deg) brightness(93%) contrast(96%);
+}
+.mainsidebar.dark .subscribersdiv:hover .subscribersIcon
+{
+  filter: brightness(0) saturate(100%) invert(38%) sepia(88%) saturate(431%)
+    hue-rotate(152deg) brightness(97%) contrast(93%);
+}
+.subscribersdiv:hover .subscribersdivtext {
+  color: #1e4da1;
+}
+.mainsidebar.dark .subscribersdiv:hover .subscribersdivtext {
+  color: #1e84af;
+}
+.subscriptiondiv:hover .subscriptionIcon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(2567%)
+  hue-rotate(209deg) brightness(93%) contrast(96%);
+}
+.mainsidebar.dark .subscriptiondiv:hover .subscriptionIcon {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(88%) saturate(431%)
+    hue-rotate(152deg) brightness(97%) contrast(93%);
+}
+.subscriptiondiv:hover .subscriptionsdivtext {
+  color: #1e4da1;
+}
+.mainsidebar.dark .subscriptiondiv:hover .subscriptionsdivtext {
+  color: #1e84af;
+}
+
+.mainsidebar.dark .subscribersdiv.active {
+  border-right: 3px solid #1E84AF;
+  border-left: 3px solid transparent;
+  transition: none;
+}
+.subscribersdiv.active {
+  border-right: 3px solid #1e4da1;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.subscriptiondiv.active {
+  border-right: 3px solid #1e4da1;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.mainsidebar.dark .subscriptiondiv.active {
+  border-right: 3px solid #1E84AF;
+  border-left: 3px solid transparent;
+  transition: none;
+}
+
+.subscribersdiv.active .subscribersIcon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(2567%)
+    hue-rotate(209deg) brightness(93%) contrast(96%);
+}
+.mainsidebar.dark .subscribersdiv.active .subscribersIcon {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(79%) saturate(475%) hue-rotate(152deg) brightness(96%) contrast(93%);
+}
+
+.subscriptiondiv.active .subscriptionIcon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(77%) saturate(2567%)
+  hue-rotate(209deg) brightness(93%) contrast(96%);
+}
+.mainsidebar.dark .subscriptiondiv.active .subscriptionIcon {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(79%) saturate(475%) hue-rotate(152deg) brightness(96%) contrast(93%);
+}
+
+.subscribersdiv.active .subscribersdivtext {
+  color: #1e4da1;
+}
+.mainsidebar.dark .subscribersdiv.active .subscribersdivtext {
+  color: #1E84AF;
+}
+.subscriptiondiv.active .subscriptionsdivtext {
+  color: #1e4da1;
+}
+.mainsidebar.dark .subscriptiondiv.active .subscriptionsdivtext {
+  color: #1E84AF;
+}
+.subscribersdiv {
+  width: 127px;
+}
+.subscriptiondiv {
+  width: 127px;
+}
+
+.addsubbox.active .addsubtext,
+.managesubbox.active .managesubtext {
+  color: black; /* Sets the text color to white for active state */
+}
+.mainsidebar.light .addsubbox.active .addsubimg,
+.mainsidebar.light .managesubbox.active .managesubimg {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(98%) saturate(0%) hue-rotate(355deg) brightness(99%) contrast(104%);
+}
+.addsubsciptionbox.active .addsubscriptiontext,
+.managesubscriptionbox.active .managesubscriptiontext {
+  color: black; /* Sets the text color to white for active state */
+}
+.mainsidebar.light .addsubsciptionbox.active .addsubscriptionimg,
+.mainsidebar.light .managesubscriptionbox.active .managesubscriptionimg {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(98%) saturate(0%) hue-rotate(355deg) brightness(99%) contrast(104%);
+}
+
+.addsubtext:hover,
+.managesubtext:hover {
+  color: rgb(53, 53, 53); /* Sets the text color to white for active state */
+}
+.addsubscriptiontext:hover,
+.managesubscriptiontext:hover {
+  color: rgb(53, 53, 53); /* Sets the text color to white for active state */
+}
+
+.mainsidebar.dark .addsubbox.active .addsubtext,
+.mainsidebar.dark .managesubbox.active .managesubtext {
+  color: white; /* Sets the text color to white for active state */
+}
+.mainsidebar.dark .addsubsciptionbox.active .addsubscriptiontext,
+.mainsidebar.dark .managesubscriptionbox.active .managesubscriptiontext {
+  color: white; /* Sets the text color to white for active state */
+}
+
+.mainsidebar.dark .addsubtext:hover,
+.mainsidebar.dark .managesubtext:hover {
+  color: rgb(198, 198, 198); /* Sets the text color to white for active state */
+}
+.mainsidebar.dark .addsubscriptiontext:hover,
+.mainsidebar.dark .managesubscriptiontext:hover {
+  color: rgb(198, 198, 198); /* Sets the text color to white for active state */
+}
+
+
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .sidebartab {
+    top: 45px;
+  }
+  .subscriberdropdownmenus {
+    position: absolute;
+    left: 127px;
+    width: 358px;
+    height: 235px;
+    z-index: 999;
+    padding: 20px;
+    top: 150px;
+}
+}
+
+
+
+@media (min-width: 820px) and (max-width: 1024px) { 
+  .sidebartab {
+    top: 25px;
+  }
+  .tabressideitems {
+    margin: 30px 0px 0px 0px;
+  }
+  .subscriberdropdownmenus {
+    position: absolute;
+    left: 127px;
+    width: 358px;
+    height: 235px;
+    z-index: 999;
+    padding: 20px;
+    top: 188px;
+}
+.subscriptiondropdownmenus {
+  position: absolute;
+  left: 127px;
+  width: 358px;
+  height: 235px;
+  z-index: 999;
+  padding: 20px;
+  top: 270px;
+}
+}
+
+
+
+@media (min-width: 767px) and (max-width: 820px) {
+  .sidebartab {
+    top: 25px;
+  }
+  .tabressideitems {
+    margin: 30px 0px;
+  }
+  .subscriberdropdownmenus {
+    position: absolute;
+    left: 127px;
+    width: 288px;
+    height: 210px;
+    z-index: 999;
+    padding: 20px;
+    top: 187px;
+}
+.addsubbox {
+  width: 120px;
+  height: 100px;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.managesubbox {
+  width: 120px;
+  height: 100px;
+  border-radius: 6px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.addsubcontent {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.managesubcontent {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addsubtext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  font-size: 14px; 
+  line-height: 15px;
+}
+.managesubtext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  font-size: 14px;
+  line-height: 15px;
+}
+.subscriptiondropdownmenus {
+  position: absolute;
+  left: 127px;
+  width: 288px;
+  height: 210px;
+  z-index: 999;
+  padding: 20px;
+  top: 270px;
+}
+.addsubsciptionbox {
+  width: 120px;
+  height: 100px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.managesubscriptionbox {
+  width: 120px;
+  height: 100px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.addsubscriptioncontent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addsubscriptiontext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  font-size: 14px;
+  line-height: 15px;
+}
+.managesubscriptioncontent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.managesubscriptiontext {
+  font-family: "Switzer Regular";
+  text-align: center;
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 15px;
+}
+}
+
+@media (min-width:432px) and (max-width:766px) {
+  .tabressideitems {
+    margin: 40px 0px;
+  }
+  .subscriberdropdownmenus {
+    position: absolute;
+    left: 127px;
+    border-radius: 0px 6px 6px 0px;
+    width: 358px;
+    height: 235px;
+    z-index: 999;
+    padding: 20px;
+    top: 217px;
+  }
+  .subscriptiondropdownmenus {
+    position: absolute;
+    left: 127px;
+    border-radius: 0px 6px 6px 0px;
+    width: 358px;
+    height: 235px;
+    z-index: 999;
+    padding: 20px;
+    top: 310px;
+  }
+}
+
+
+@media (max-width: 431px) {
+  .mainsidebar {
+    display: none;
+  }
+}

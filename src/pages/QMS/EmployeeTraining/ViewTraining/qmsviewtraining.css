@@ -1,0 +1,20 @@
+.training-info-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+
+.view-training-label {
+    font-family: 'Switzer Light';
+    font-size: 16px;
+}
+
+.view-training-data {
+    font-family: 'Switzer Regular';
+    font-size: 18px;
+}
+
+.edit-btn, .delete-btn {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    color: #AAAAAA;
+}

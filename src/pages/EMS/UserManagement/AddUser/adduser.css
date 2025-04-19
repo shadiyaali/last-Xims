@@ -1,0 +1,147 @@
+.add-user-header {
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 24px;
+    margin-bottom: 20px;
+}
+
+.add-user-text {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: white;
+}
+
+.list-user-btn {
+ 
+    background-color: transparent;
+    width: 140px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    
+}
+
+.add-user-form {
+    border-top: 1px solid #383840;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.add-user-label{
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.required-field {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    color: #F9291F;
+}
+
+.add-user-inputs {
+    margin-top: 12px;
+    height: 49px;
+    background-color: #24242D;
+    border: none;
+    outline: none;
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: 'Switzer Light';
+}
+
+.permissions-texts {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    color: white !important;
+}
+
+.add-user-address, .add-user-notes {
+    height: 109px;
+    border-radius: 6px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cancel-btns {
+    width: 176px;
+    height: 49px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9291F;
+    border-radius: 6px;
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.cancel-btns:hover {
+    background-color: #be0c03;
+    color: white;
+}
+
+.save-btns {
+    width: 176px;
+    height: 49px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E84AF;
+    border-radius: 6px;
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+.save-btns:hover {
+    background-color: #006692;
+    color: white;
+}
+
+
+.form-checkboxes {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1px solid white;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+
+.form-checkboxes:checked {
+    border-color: white;
+    background-color: transparent;
+  }
+  
+  /* Add the blue tick */
+  .form-checkboxes:checked::after {
+    content: url('../../../../assets/images/AddCompany/tickmark.svg');
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(78deg) brightness(111%) contrast(101%);
+    transform: translate(-50%, -50%);
+  }

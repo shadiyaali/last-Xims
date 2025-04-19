@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.list-policy-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 32px;
+}
+
+.doc-path-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: #AAAAAA;
+}
+
+.policy-path-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.policy-search::placeholder {
+    color: #FFFFFF80;
+}
+
+.policy-search {
+    font-family: 'Switzer Light';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.add-policy-btn {
+    font-family: 'Switzer Light';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.policy-list-head {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: white;
+}
+
+.policy-name {
+    font-family: "Inter Tight";
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.view-policy-btn-text {
+    font-family: 'Switzer Light'; 
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    color: #AAAAAA;
+}
+
+.actions-text {
+    font-family: 'Switzer Regular';
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    color: #AAAAAA;
+}
+
+.qms-policy-img {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(0%) saturate(1773%) hue-rotate(279deg) brightness(93%) contrast(93%);
+}
+
+.add-policy-btn:hover .qms-policy-img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(20deg) brightness(103%) contrast(103%);
+}
+
+.qms-policy-modal-head {
+    font-family: 'Switzer Medium';
+    font-size: 26px;
+}
+.policy-content-head {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.attached-document-head {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.attached-file-name {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+}
+
+.view-attachment-text {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+}
+
+.download-btn {
+    font-family: 'Switzer Regular';
+    font-size: 16px;
+}

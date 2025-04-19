@@ -1,0 +1,314 @@
+.addmaincmpy {
+  border: 1px solid #E9E9E9;
+}
+.addmaincmpy.dark  {
+  border: 1px solid #343434;
+}
+.addcmyform {
+  background-color: white;
+  border-radius: 8px;
+}
+.addmaincmpy.dark  .addcmyform {
+  background-color: #13131A;
+}
+.addcmpnyhead {
+  margin-bottom: 35px;
+  font-family: 'Switzer SemiBold';
+  font-size: 24px;
+  line-height: 27.77px;
+  color: #25282B;
+}
+.addmaincmpy.dark  .addcmpnyhead {
+  color: white;
+}
+
+.head {
+  font-family: "Switzer Regular";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20.83px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-family: "Switzer Regular";
+  font-weight: 400;
+  font-size: 14px;
+  color: #25282b;
+}
+.addmaincmpy.dark label {
+  color: #D4D7DA;
+}
+
+.addcmyinputs {
+  border-radius: 4px;
+  height: 44px;
+  padding: 0px 15px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  border: 1px solid #E9E9E9;
+}
+.addmaincmpy.dark .addcmyinputs {
+  border: 1px solid #343434;
+  background-color: #13131A;
+  color: white;
+}
+.choosefile {
+  border: 1px solid #E9E9E9;
+}
+.addmaincmpy.dark .choosefile {
+  border: 1px solid #343434;
+}
+.noupfile {
+  color: #D2D2D2;
+}
+.addmaincmpy.dark .noupfile {
+  color: #393939;
+}
+.upfile {
+  color: black;
+}
+.addmaincmpy.dark .upfile {
+  color: white;
+}
+
+.submits {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 30px;
+  background-color: #1E4DA1;
+  color: white;
+}
+.addmaincmpy.dark .submits {
+  background-color: white;
+  color: #0D0D0D;
+}
+
+.submits:hover {
+  background-color: #18366b;
+}
+.addmaincmpy.dark .submits:hover {
+  background-color: rgb(193, 193, 193);
+}
+
+.form-checkbox span {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+input[type="checkbox"]:not(:checked) + span {
+  color: #898989; 
+}
+
+
+input[type="checkbox"]:checked + span {
+  color: #00296f;
+}
+.addmaincmpy.dark input[type="checkbox"]:checked + span {
+  color: white;
+} 
+
+.filename {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.credentials {
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.business-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color: #B3CAFD1A;
+  }
+  
+  .background-img {
+    width: 100%;
+   padding-right: 20px;
+  }
+  
+  .business-text {
+    font-size: 28px;
+    font-family: 'Switzer SemiBold';
+    line-height: 36.96px;
+    color: #25282B;
+    margin: 20px 0;
+  }
+  .addmaincmpy.dark .business-text {
+    color: #D4D7DA;
+  }
+  
+  .group-img {
+    width: 100%;
+    /* max-width: 400px;  */
+    margin-top: 5rem;
+  }
+  .permissionboxes {
+    gap: 1.5rem;
+  }
+
+  /* Base styles for the checkbox */
+.form-checkbox {
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #898989;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.addmaincmpy.light .dark {
+  display: none;
+}
+.addmaincmpy.dark .lights {
+  display: none;
+}
+
+/* Style for the checked state */
+.form-checkbox:checked {
+  background-color: transparent;
+  border-color: #1E4DA1; /* Optional: Change border color to blue when checked */
+}
+.addmaincmpy.dark .form-checkbox:checked {
+  border-color: white;
+}
+
+/* Add the blue tick */
+.form-checkbox:checked::after {
+  content: url('../../assets/images/AddCompany/tickmark.svg');
+  color: #1E4DA1; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.addmaincmpy.dark .form-checkbox:checked::after {
+  color: white;
+  content: url('../../assets/images/AddCompany/tickmark.svg');
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(78deg) brightness(111%) contrast(101%);
+}
+
+.crop-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+}
+
+.crop-controls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10000;
+}
+
+.crop-controls button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Switzer Regular";
+  font-weight: 400;
+}
+
+.crop-controls button:hover {
+  background-color: #ddd;
+}
+
+/* For Chrome, Safari, and other Webkit-based browsers */
+.addmaincmpy.dark input:-webkit-autofill {
+  color: rgb(255, 255, 255) !important; /* White text color */
+  transition: 1000s ease-in-out 0s !important;
+}
+
+.addcmyeyeicon {
+  top: 54px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+
+
+  
+  @media (max-width:431px) {
+    .addcmpnyhead {
+      margin-bottom: 15px;
+    }
+    .addcmyinputs {
+      margin-top: 4px;
+    }
+    .illustrateimg  {
+      display: none;
+    }
+    .addmaincmpy {
+      margin-bottom: 100px;
+    }
+    .credentials {
+      margin-top: 47px;
+    }
+    .permissionboxes {
+      gap: 0.6rem 1.2rem;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+    .addcmyeyeicon {
+      top: 52px;
+    }
+  }
+
+
+  @media (max-width:415px) {
+    .permissionboxes {
+      gap: 0.6rem 1.2rem;
+    }
+  }
+
+    @media (max-width:403px) {
+      .permissionboxes {
+        gap: 0.6rem 1.2rem;
+      }
+  }
+
+  
+  @media (max-width:399px) {
+    .permissionboxes {
+      gap: 0.6rem 1.2rem;
+    }
+  }
+
+  @media (max-width:396px) {
+    .permissionboxes {
+      gap: 0.6rem 1.2rem;
+    }
+  }
+
+
+
+
+
+
+  

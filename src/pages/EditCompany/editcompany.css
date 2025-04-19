@@ -1,0 +1,290 @@
+.maineditcmpy {
+    height: auto;
+    border-color: #E9E9E9;
+}
+.maineditcmpy.dark {
+    border-color: #343434;
+}
+.ediform {
+    background-color: white;
+}
+.maineditcmpy.dark .ediform {
+    background-color: #13131A;
+}
+
+.editcmpnyhead {
+    margin-bottom: 25px;
+    font-family: 'Switzer Regular';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27.77px;
+    color: #25282B;
+}
+.maineditcmpy.dark .editcmpnyhead {
+    color: white;
+}
+
+h3 {
+    font-family: 'Switzer Regular';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20.83px;
+    margin-bottom: 25px;
+}
+
+label {
+    font-family: 'Switzer Regular';
+    font-weight: 400;
+    font-size: 14px;
+    color: #25282B;
+}
+.maineditcmpy.dark label {
+    color: #D4D7DA;
+} 
+
+.editcmpyinput {
+    border-radius: 4px;
+    height: 44px;
+    padding: 0px 15px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #E9E9E9;
+}
+.maineditcmpy.dark .editcmpyinput {
+    border: 1px solid #343434;
+    background-color: #13131A;
+    color: white;
+}
+.editchoose {
+    border: 1px solid #E9E9E9;
+}
+.maineditcmpy.dark .editchoose {
+    border: 1px solid #343434;
+}
+.editnoup {
+    color: #D2D2D2;
+}
+.editup {
+    color: black;
+}
+.maineditcmpy.dark .editnoup {
+    color: #393939;
+}
+.maineditcmpy.dark .editup {
+    color: white;
+}
+
+.submits {
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px 30px;
+}
+
+.form-checkbox span {
+    font-family: 'Switzer Light';
+    font-weight: 400; 
+    font-size: 14px;
+}
+
+/* Style for unchecked checkboxes */
+input[type="checkbox"]:not(:checked) + span {
+    color: #898989; /* Gray color when not checked */
+  }
+  
+  /* Style for checked checkboxes */
+  input[type="checkbox"]:checked + span {
+    color: #1E4DA1; /* Blue color when checked */
+  }
+
+  .maineditcmpy.dark   input[type="checkbox"]:checked + span {
+    color: white;
+  }
+
+
+
+  .form-checkbox:checked::after {
+    content: url('../../assets/images/AddCompany/tickmark.svg');
+    color: #1E4DA1; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .maineditcmpy.dark .form-checkbox:checked::after {
+    color: white;
+    content: url('../../assets/images/AddCompany/tickmark.svg');
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(78deg) brightness(111%) contrast(101%);
+  }
+
+  .form-checkbox:checked {
+    background-color: transparent;
+    border-color: #1E4DA1;
+  }
+  .maineditcmpy.dark .form-checkbox:checked {
+    border-color: white;
+  }
+  
+  .filename {
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+
+  .updatebtn {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 36px;
+    background-color: #1E4DA1;
+    color: white;
+  }
+  .updatebtn:hover {
+    background-color: #18366b;
+  }
+
+  .updatebtns {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 36px;
+    border: 1px solid  ;
+    color: #1E4DA1;
+  }
+
+  .maineditcmpy.dark .updatebtns {
+    border: 1px solid white;
+    color: white;
+  }
+  .maineditcmpy.dark .updatebtns:hover {
+    background-color: white;
+    color: #0D0D0D;
+  }
+
+  .updatebtns:hover {
+    background-color:#1E4DA1 ;
+    color: white;
+  }
+
+
+
+  .maineditcmpy.dark .updatebtn {
+    background-color: white;
+    color: #0D0D0D;
+  }
+  .maineditcmpy.dark .updatebtn:hover {
+    background-color: rgb(193, 193, 193);
+  }
+
+
+
+  .crop-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+  }
+  
+  .crop-controls {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10000;
+  }
+  
+  .crop-controls button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Switzer Regular";
+    font-weight: 400;
+  }
+  
+  .crop-controls button:hover {
+    background-color: #ddd;
+  }
+
+
+  /* For Chrome, Safari, and other Webkit-based browsers */
+  .maineditcmpy.dark input:-webkit-autofill {
+  color: rgb(255, 255, 255) !important; /* White text color */
+  transition: 1000s ease-in-out 0s !important;
+}
+
+.change-pswrd-edit-cmpy {
+  font-family: 'Switzer Regular';
+  font-size: 20px;
+  color: #25282B;
+}
+.new-pswd-label, .cnfrm-paswd-label {
+  font-family: 'Switzer Regular';
+  font-size: 14px;
+  color: #25282B;
+}
+
+.new-pswd-inputs,.confrm-paswd-inputs {
+  font-family: 'Switzer Light'; 
+  margin-top: 8px;
+  background-color: transparent;
+}
+
+.pswd-cancel-btn, .pswd-update-btn {
+  font-family: 'Switzer Light'; 
+}
+
+.maineditcmpy.dark .pswd-modal {
+  background-color: #13131A;
+}
+.maineditcmpy.dark .change-pswrd-edit-cmpy,.maineditcmpy.dark .cross-icon  {
+  color: white;
+}
+
+.maineditcmpy.dark .new-pswd-inputs, .maineditcmpy.dark .confrm-paswd-inputs {
+  border-color: #343434;
+}
+
+
+  @media(max-width:431px ) {
+    .maineditcmpy {
+        margin-bottom: 100px;
+        height: auto;
+        /* max-width: calc(100vw- 40px); */
+    }
+    .permissionhead {
+        margin-top: 50px;
+    }
+    .editcmpyinput {
+        margin-top: 4px;
+    }
+    .editchoose {
+      width: 11rem;
+    }
+    .preview {
+      margin-left: 15px;
+
+    }
+    .updatebtn{
+     margin-top: 50px;
+    }
+    .change-pswds-sbt {
+      flex-direction: column;
+      row-gap: 0px;
+    }
+  }
+
+
