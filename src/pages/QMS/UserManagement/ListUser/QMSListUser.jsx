@@ -68,7 +68,7 @@ const QMSListUser = () => {
 
   const fetchUsers = async () => {
     try {
-      const companyId = getUserCompanyId(); // Fetch company ID dynamically
+      const companyId = getUserCompanyId();  
 
       if (!companyId) return;
 

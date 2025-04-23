@@ -26,7 +26,7 @@ import { useNavigate } from 'react-router-dom';
 import AddQmsPolicySuccessModal from './Modals/AddQmsPolicySuccessModal';
 import AddQmsPolicyErrorModal from './Modals/AddQmsPolicyErrorModal';
 
-const AddQmsPolicy = () => {
+const AddScope = () => {
   const navigate = useNavigate();
   const [isSaving, setIsSaving] = useState(false);
   const [formData, setFormData] = useState({
@@ -611,7 +611,7 @@ const AddQmsPolicy = () => {
       editorRef.current.innerHTML = '<p><br></p>';
     }
 
-    navigate('/company/qms/policy')
+    navigate('/company/qms/scope')
   };
   
   useEffect(() => {
@@ -700,7 +700,7 @@ const AddQmsPolicy = () => {
 
       console.log("Request data:", Object.fromEntries(apiFormData.entries()));
 
-      const response = await axios.post(`${BASE_URL}/qms/policy/`, apiFormData, {
+      const response = await axios.post(`${BASE_URL}/qms/scope/`, apiFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -710,7 +710,7 @@ const AddQmsPolicy = () => {
         setShowAddPolicySuccessModal(true);
         setTimeout(() => {
           setShowAddPolicySuccessModal(false);
-          navigate('/company/qms/policy');  
+          navigate('/company/qms/scope');  
           resetForm();
           
         }, 1500);
@@ -819,7 +819,7 @@ const AddQmsPolicy = () => {
 
   return (
     <div className="bg-[#1C1C24] text-white p-5 rounded-[8px]">
-      <h1 className="add-policy-head">Add Policies</h1>
+      <h1 className="add-policy-head">Add Scope Statements</h1>
 
       <AddQmsPolicySuccessModal
         showAddPolicySuccessModal={showAddPolicySuccessModal}
@@ -835,14 +835,14 @@ const AddQmsPolicy = () => {
 
       {/* Title Field */}
       <div className="mb-4">
-        <label htmlFor="policyTitle" className="block text-sm font-medium text-gray-300 mb-2">Policy Title</label>
+        <label htmlFor="policyTitle" className="block text-sm font-medium text-gray-300 mb-2">Scope Statements Title</label>
         <input
           type="text"
           id="policyTitle"
           value={formData.title}
           onChange={handleTitleChange}
           className="bg-[#24242D] text-white px-4 py-2 w-full rounded-[4px] border border-[#383840] focus:outline-none focus:border-blue-500"
-          placeholder="Enter policy title"
+          placeholder="Enter  title"
           maxLength={50}
         />
       </div>
@@ -1046,7 +1046,7 @@ const AddQmsPolicy = () => {
 
       {/* File Upload Section */}
       <div className="flex items-center justify-between mt-8 mb-[23px]">
-        <label className="attach-policy-text">Attach Quality Policy:</label>
+        <label className="attach-policy-text">Attach Quality Scope Statements:</label>
         <div className="flex items-center ">
           <label className="flex justify-center gap-[10px] items-center w-[326px] h-[44px] px-[10px] text-[#AAAAAA] rounded-md border border-[#383840] cursor-pointer transition">
             Choose File
@@ -1096,4 +1096,4 @@ const AddQmsPolicy = () => {
   );
 };
 
-export default AddQmsPolicy;
+export default AddScope;

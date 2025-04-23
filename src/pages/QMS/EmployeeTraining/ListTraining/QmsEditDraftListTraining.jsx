@@ -177,67 +177,92 @@ const QmsEditDraftListTraining = () => {
         }
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+   const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Create FormData object for file upload
+    const submitData = new FormData();
+    
+    // Format time fields - only if hour and minute are both provided
+    const formattedStartTime = formData.start_time.hour && formData.start_time.min 
+        ? `${formData.start_time.hour}:${formData.start_time.min}:00` 
+        : '';
         
-        // Create FormData object for file upload
-        const submitData = new FormData();
-        
-        // Format time fields
-        const formattedStartTime = `${formData.start_time.hour}:${formData.start_time.min}:00`;
-        const formattedEndTime = `${formData.end_time.hour}:${formData.end_time.min}:00`;
-        
-        // Add regular fields
-        submitData.append('training_title', formData.training_title);
-        submitData.append('type_of_training', formData.type_of_training);
-        submitData.append('expected_results', formData.expected_results);
-        submitData.append('actual_results', formData.actual_results);
-        submitData.append('status', formData.status);
-        submitData.append('requested_by', formData.requested_by);
-        submitData.append('date_planned', formData.date_planned);
-        submitData.append('date_conducted', formData.date_conducted);
-        submitData.append('start_time', formattedStartTime);
-        submitData.append('end_time', formattedEndTime);
-        submitData.append('venue', formData.venue);
-        submitData.append('training_evaluation', formData.training_evaluation);
-        submitData.append('evaluation_date', formData.evaluation_date);
-        submitData.append('evaluation_by', formData.evaluation_by);
-        submitData.append('send_notification', formData.send_notification);
-        submitData.append('is_draft', formData.is_draft);
-        
-        // Handle attendees (many-to-many field)
+    const formattedEndTime = formData.end_time.hour && formData.end_time.min 
+        ? `${formData.end_time.hour}:${formData.end_time.min}:00` 
+        : '';
+    
+    // Add regular fields
+    submitData.append('training_title', formData.training_title);
+    submitData.append('type_of_training', formData.type_of_training);
+    submitData.append('expected_results', formData.expected_results);
+    submitData.append('actual_results', formData.actual_results || '');
+    submitData.append('status', formData.status || 'Requested'); // Provide a default value
+    
+    // Only append fields if they have valid values
+    if (formData.requested_by) submitData.append('requested_by', formData.requested_by);
+    
+    // Handle date fields - convert null/undefined to empty string
+    submitData.append('date_planned', formData.date_planned || '');
+    submitData.append('date_conducted', formData.date_conducted || '');
+    
+    // Only append time fields if they have valid values
+    if (formattedStartTime) submitData.append('start_time', formattedStartTime);
+    if (formattedEndTime) submitData.append('end_time', formattedEndTime);
+    
+    submitData.append('venue', formData.venue);
+    submitData.append('training_evaluation', formData.training_evaluation || '');
+    submitData.append('evaluation_date', formData.evaluation_date || '');
+    
+    if (formData.evaluation_by) submitData.append('evaluation_by', formData.evaluation_by);
+    
+    // Convert boolean to string values for backend
+    submitData.append('send_notification', formData.send_notification ? 'true' : 'false');
+    submitData.append('is_draft', formData.is_draft ? 'true' : 'false');
+    
+    // Handle attendees (many-to-many field)
+    if (formData.training_attendees && formData.training_attendees.length > 0) {
         formData.training_attendees.forEach(attendee => {
             submitData.append('training_attendees', attendee);
         });
+    }
+    
+    // Handle file attachment
+    if (formData.attachment && typeof formData.attachment === 'object') {
+        submitData.append('attachment', formData.attachment);
+    }
+    
+    try {
+        // Debug what's being sent
+        console.log("Submitting data:", Object.fromEntries(submitData.entries()));
         
-        // Handle file attachment
-        if (formData.attachment && typeof formData.attachment === 'object') {
-            submitData.append('attachment', formData.attachment);
-        }
+        const response = await axios.put(`${BASE_URL}/qms/training/${id}/edit/`, submitData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
         
-        try {
-            const response = await axios.put(`${BASE_URL}/qms/training/${id}/draft_/`, submitData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
-            
-            console.log("Training updated successfully:", response.data);
-            setShowUpdatedSuccessModal(true);
-            setTimeout(() => {
-                setShowUpdatedSuccessModal(false);
-                navigate("/company/qms/list-training");
-            }, 1500);
-        } catch (err) {
-            console.error("Error updating training:", err);
+        console.log("Training updated successfully:", response.data);
+        setShowUpdatedSuccessModal(true);
+        setTimeout(() => {
+            setShowUpdatedSuccessModal(false);
+            navigate("/company/qms/list-training");
+        }, 1500);
+    } catch (err) {
+        console.error("Error updating training:", err);
+        if (err.response && err.response.data) {
+            // Display specific validation errors
+            console.error("Validation errors:", err.response.data);
+            setError(`Failed to update training: ${JSON.stringify(err.response.data)}`);
+        } else {
             setError("Failed to update training");
-            setShowUpdateErrorModal(true);
-            setTimeout(() => {
-                setShowUpdateErrorModal(false);
-            }, 3000);
         }
-    };
-
+        setShowUpdateErrorModal(true);
+        setTimeout(() => {
+            setShowUpdateErrorModal(false);
+        }, 3000);
+    }
+};
     const handleListTraining = () => {
         navigate('/company/qms/list-training');
     };

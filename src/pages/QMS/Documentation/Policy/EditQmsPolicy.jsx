@@ -34,6 +34,7 @@ const EditQmsPolicy = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
+    title: '',
     content: '',
     existingPolicy: null,
     newPolicy: null
@@ -95,7 +96,7 @@ const EditQmsPolicy = () => {
   const [selectedFontFormat, setSelectedFontFormat] = useState(fontFormats[0].label);
 
 
-  useEffect((id) => {
+  useEffect(() => {
     fetchPolicyDetails();
   }, [id]);
 
@@ -138,19 +139,31 @@ const EditQmsPolicy = () => {
       toast.error('No file is available to view');
     }
   };
+  const handleTitleChange = (e) => {
+    setFormData({
+      ...formData,
+      title: e.target.value
+    });
+  };
 
 
   const fetchPolicyDetails = async () => {
     try {
       console.log('Fetching policy with ID:', id);
 
-
       // Fetch specific policy details using the ID from URL
       const response = await axios.get(`${BASE_URL}/qms/policy-get/${id}/`, {
 
       });
       const policyData = response.data;
-      console.log("policieeeeeeeeeeeeeee", response.data)
+      console.log("Policy data:", response.data);
+      
+      // Set form data with the title
+      setFormData(prev => ({
+        ...prev,
+        title: policyData.title || ''
+      }));
+      
       // Set editor content
       if (editorRef.current && policyData.text) {
         editorRef.current.innerHTML = policyData.text;
@@ -673,6 +686,7 @@ const EditQmsPolicy = () => {
   const handleCancel = () => {
     // Reset form data
     setFormData({
+      title: '',
       content: '',
       energyPolicy: null
     });
@@ -713,7 +727,14 @@ const EditQmsPolicy = () => {
         return;
       }
 
+      if (!formData.title.trim()) {
+        toast.error('Please enter a policy title');
+        setIsSubmitting(false); // Reset loading state on error
+        return;
+      }
+
       const apiFormData = new FormData();
+      apiFormData.append('title', formData.title);
       apiFormData.append('text', editorContent);
 
       // Add policy file if selected
@@ -825,9 +846,6 @@ const EditQmsPolicy = () => {
     );
   };
 
-
-
-
   return (
     <div className="bg-[#1C1C24] text-white p-5 rounded-[8px]">
       <h1 className="add-policy-head">Edit Policy</h1>
@@ -843,6 +861,21 @@ const EditQmsPolicy = () => {
       />
 
       <div className='border-t border-[#383840] mt-[21px] mb-5'></div>
+
+      {/* Add Title Input Field */}
+      <div className="mb-5">
+        <label className="block text-white mb-2 text-sm font-medium">Policy Title</label>
+        <input
+          type="text"
+          value={formData.title}
+          onChange={handleTitleChange}
+          className="w-full px-4 py-2 bg-[#24242D] border border-[#383840] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+          placeholder="Enter policy title"
+          required
+        />
+      </div>
+
+
 
       <div className="flex items-center bg-[#24242D] justify-between px-5 py-[13px] rounded-[4px] mb-4">
         {/* Text formatting */}

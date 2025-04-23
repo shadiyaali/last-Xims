@@ -7,7 +7,7 @@ import axios from "axios";
 import { BASE_URL } from "../../../../Utils/Config";
 const ViewQmsProcesses = () => {
     const navigate = useNavigate();
-    const { id } = useParams();  
+    const { id } = useParams();
     const [formData, setFormData] = useState(null);
     const handleClose = () => {
         navigate('/company/qms/processes');
@@ -15,7 +15,7 @@ const ViewQmsProcesses = () => {
     const handleDelete = () => {
         setFormData(null);
     };
-    
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -70,11 +70,18 @@ const ViewQmsProcesses = () => {
                         <div>
                             <label className="block view-interested-parties-label mb-[6px]">Related Procedure</label>
                             <div className="text-white view-interested-parties-data">
-                                {formData.legal_requirements === 'N/A'
-                                    ? formData.custom_legal_requirements
-                                    : formData.legal_requirements}
+                                {formData.legal_requirement_details && formData.legal_requirement_details.length > 0 ? (
+                                    <ul className="list-disc pl-5">
+                                        {formData.legal_requirement_details.map(req => (
+                                            <li key={req.id}>{req.title}  </li>
+                                        ))}
+                                    </ul>
+                                ) : formData.custom_legal_requirements ? (
+                                    formData.custom_legal_requirements
+                                ) : (
+                                    "No related procedures"
+                                )}
                             </div>
-
                         </div>
                         <div className="flex justify-end space-x-10">
                             <button className="flex flex-col items-center view-interested-parties-label gap-[8px]">

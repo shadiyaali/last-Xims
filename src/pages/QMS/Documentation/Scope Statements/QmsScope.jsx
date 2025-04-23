@@ -14,7 +14,7 @@ import DeleteQmsPolicyConfirmModal from './Modals/DeleteQmsPolicyConfirmModal';
 import DeleteQmsPolicySuccessModal from './Modals/DeleteQmsPolicySuccessModal';
 import DeleteQmsPolicyErrorModal from './Modals/DeleteQmsPolicyErrorModal';
 
-const QmsPolicy = () => {
+const QmsScope = () => {
   const navigate = useNavigate();
   const [expandedPolicy, setExpandedPolicy] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -56,7 +56,7 @@ const QmsPolicy = () => {
     try {
       const companyId = getUserCompanyId();
       console.log("Fetching policies for Company ID:", companyId);
-      const response = await axios.get(`${BASE_URL}/qms/policy/${companyId}/`);
+      const response = await axios.get(`${BASE_URL}/qms/scope/${companyId}/`);
       setQmsPolicies(response.data);
       console.log("Policies loaded:", response.data);
     } catch (error) {
@@ -65,7 +65,7 @@ const QmsPolicy = () => {
   };
 
   const handleAddQMSPolicy = () => {
-    navigate('/company/qms/addpolicy');
+    navigate('/company/qms/addscope');
   };
 
   const handleViewPolicy = (policy) => {
@@ -86,7 +86,7 @@ const QmsPolicy = () => {
   const handleConfirmDelete = async () => {
     if (policyToDelete) {
       try {
-        await axios.delete(`${BASE_URL}/qms/policy/${policyToDelete}/update/`);
+        await axios.delete(`${BASE_URL}/qms/scope/${policyToDelete}/update/`);
         fetchPolicies();
         setShowDeleteSuccessModal(true);
         setTimeout(() => {
@@ -110,14 +110,14 @@ const QmsPolicy = () => {
   };
 
   const handleEditPolicy = (policyId) => {
-    navigate(`/company/qms/editpolicy/${policyId}`);
+    navigate(`/company/qms/editscope/${policyId}`);
   };
 
   const handleDownload = async (policyId, filename) => {
     try {
       setIsLoading(true);
       console.log("Downloading policy file:", policyId);
-      const response = await axios.get(`${BASE_URL}/qms/policy-download/${policyId}/`);
+      const response = await axios.get(`${BASE_URL}/qms/scope-download/${policyId}/`);
       console.log("Download response:", response.data);
       if (response.data.download_url) {
         const link = document.createElement('a');
@@ -166,7 +166,7 @@ const QmsPolicy = () => {
 
   return (
     <div className="bg-[#1C1C24] rounded-lg text-white p-5">
-      <h1 className="list-policy-head">List Policy</h1>
+      <h1 className="list-policy-head">List Scope Statements</h1>
 
       <DeleteQmsPolicyConfirmModal
         showDeleteModal={showDeleteModal}
@@ -187,7 +187,7 @@ const QmsPolicy = () => {
       <div className="flex items-center gap-3 pb-6 mb-6 border-b border-[#383840]">
         <span className="doc-path-text">Documentation</span>
         <span className="text-gray-400"><img src={arrow} alt="Arrow" /></span>
-        <span className='policy-path-text'>Policy</span>
+        <span className='policy-path-text'>Scope Statements</span>
       </div>
       
       <div className="flex justify-between items-center mb-6">
@@ -208,7 +208,7 @@ const QmsPolicy = () => {
           className="bg-transparent border border-[#858585] text-[#858585] rounded-[4px] p-[10px] flex items-center justify-center gap-[10px] transition-all duration-200 w-[140px] h-[42px] add-policy-btn hover:bg-[#858585] hover:text-white group"
           onClick={handleAddQMSPolicy}
         >
-          <span>Add Policy</span>
+          <span>Add Scope</span>
           <Plus size={22} className='text-[#858585] group-hover:text-white transition-colors duration-200' />
         </button>
       </div>
@@ -236,7 +236,7 @@ const QmsPolicy = () => {
                   <div className="flex justify-start gap-10 items-center mb-4">
                 
                     <div className="flex gap-4 flex-col">
-                    <p className='actions-text'>Quality policy</p>
+                    <p className='actions-text'>Quality Scope Statements</p>
                       <button
                         className='flex justify-center items-center gap-2 hover:text-blue-400 transition-colors'
                         onClick={() => handleViewPolicy(policy)}
@@ -270,7 +270,7 @@ const QmsPolicy = () => {
         </div>
       ) : (
         <div className="bg-[#24242D] rounded-md p-5 text-center">
-          <p className="text-gray-500">No policies found.</p>
+          <p className="text-gray-500">No Scope Statements found.</p>
         </div>
       )}
 
@@ -295,7 +295,7 @@ const QmsPolicy = () => {
               className="bg-[#1C1C24] rounded-lg w-full max-w-[700px] max-h-[80vh] overflow-auto shadow-lg"
             >
               <div className="flex justify-between items-center mx-5 mt-5 mb-[27px] border-b border-[#383840] pb-[21px]">
-                <h2 className="qms-policy-modal-head">QMS Policy</h2>
+                <h2 className="qms-policy-modal-head">QMS Scope Statements</h2>
                 <button
                   onClick={handleCloseModal}
                   className="text-white bg-[#24242D] w-[36px] h-[36px] flex justify-center items-center rounded-md"
@@ -305,7 +305,7 @@ const QmsPolicy = () => {
               </div>
 
               <div className="px-5 pb-5">
-                <h2 className="policy-content-head mb-3">Policy Content</h2>
+                <h2 className="policy-content-head mb-3">Scope Statements Content</h2>
                 <div className="bg-[#24242D] p-5 rounded-md">
                   {selectedPolicy.text && selectedPolicy.text.startsWith('<') ? (
                     <div className="policy-content" dangerouslySetInnerHTML={createMarkup(selectedPolicy.text)} />
@@ -350,4 +350,4 @@ const QmsPolicy = () => {
   );
 };
 
-export default QmsPolicy;
+export default QmsScope;

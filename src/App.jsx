@@ -22,13 +22,16 @@ import CompanyLayout from "./pages/CompanyLayout";
 import CompanyDashboard from "./pages/Company Dashboard/CompanyDashboard";
 import CompanyBackup from "./pages/Company Backup/CompanyBackup";
 import QmsPolicy from "./pages/QMS/Documentation/Policy/QmsPolicy";
+import QmsScope from "./pages/QMS/Documentation/Scope Statements/QmsScope";
+import EditScope from "./pages/QMS/Documentation/Scope Statements/EditScope";
 import QmsManual from "./pages/QMS/Documentation/Manual/QmsManual";
 import QmsProcedure from "./pages/QMS/Documentation/Procedure/QmsProcedure";
 import QmsRecordFormat from "./pages/QMS/Documentation/Record Format/QmsRecordFormat";
 import QmsProcesses from "./pages/QMS/Documentation/Processes/QmsProcesses";
-import QmsScopeStatements from "./pages/QMS/Documentation/Scope Statements/QmsScopeStatements";
+
 import EmsPolicy from "./pages/EMS/Documentation/Policy/EmsPolicy";
 import AddQmsPolicy from "./pages/QMS/Documentation/Policy/AddQmsPolicy";
+import AddScope from "./pages/QMS/Documentation/Scope Statements/AddScope";
 import AddQmsManual from "./pages/QMS/Documentation/Manual/AddQmsManual";
 import AddQmsProcedure from "./pages/QMS/Documentation/Procedure/AddQmsProcedure";
 import AddQmsRecordFormat from "./pages/QMS/Documentation/Record Format/AddQmsRecordFormat";
@@ -266,7 +269,7 @@ const ThemedApp = () => {
           <Route path="qms/view-draft-processes/:id" element={<ViewQmsDraftProcesses />} />
 
 
-          <Route path="qms/scope-statements" element={<QmsScopeStatements />} />
+       
 
 
           {/* QMS Employee Training */}
@@ -309,17 +312,19 @@ const ThemedApp = () => {
           <Route path="qms/view-draft-awareness-training/:id" element={<QmsViewDraftAwarenessTraining />} />
 
 
-
+          <Route path="qms/scope" element={<QmsScope />} />
+          <Route path="qms/addscope" element={<AddScope />} />
+          <Route path="qms/editscope/:id" element={<EditScope />} />
 
 
           {/* QMS Actions, Meeting and Communication Management */}
           <Route path="qms/list-meeting" element={<QmsListMeeting />} />
           <Route path="qms/add-meeting" element={<QmsAddMeeting />} />
-          <Route path="qms/edit-meeting" element={<QmsEditMeeting />} />
-          <Route path="qms/view-meeting" element={<QmsViewMeeting />} />
+          <Route path="qms/edit-meeting/:id" element={<QmsEditMeeting />} />
+          <Route path="qms/view-meeting/:id" element={<QmsViewMeeting />} />
           <Route path="qms/draft-meeting" element={<QmsDraftMeeting />} />
-          <Route path="qms/edit-draft-meeting" element={<QmsEditDraftMeeting />} />
-          <Route path="qms/view-draft-meeting" element={<QmsViewDraftMeeting />} />
+          <Route path="qms/edit-draft-meeting/:id" element={<QmsEditDraftMeeting />} />
+          <Route path="qms/view-draft-meeting/:id" element={<QmsViewDraftMeeting />} />
 
           <Route path="qms/list-inbox" element={<QmsListInboxSystemMessaging />} />
           <Route path="qms/list-trash" element={<QmsListTrashSystemMessaging />} />

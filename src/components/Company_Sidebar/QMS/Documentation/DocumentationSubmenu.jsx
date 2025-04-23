@@ -90,12 +90,12 @@ const DocumentationSubmenu = (props) => {
       ]
     },
     {
-      id: "scope-statements",
-      label: "Scope Statements",
+      id: "scope",
+      label: "ScopeStatements",
       icon: (
-        <img src={scope} alt="Scope Statements" className="w-[15px] h-[15px]" />
+        <img src={scope} alt="ScopeStatements" className="w-[15px] h-[15px]" />
       ),
-      path: "/company/qms/scope-statements",
+      path: "/company/qms/scope",
       relatedPaths: []
     },
   ];

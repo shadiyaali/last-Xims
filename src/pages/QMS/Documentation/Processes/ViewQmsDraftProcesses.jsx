@@ -93,13 +93,19 @@ const ViewQmsDraftProcesses = () => {
               </div>
             </div>
             <div>
-              <label className="block view-interested-parties-label mb-[6px]">
-                Related Procedure
-              </label>
+              <label className="block view-interested-parties-label mb-[6px]">Related Procedure</label>
               <div className="text-white view-interested-parties-data">
-                {formData.legal_requirements === "N/A"
-                  ? formData.custom_legal_requirements
-                  : formData.legal_requirements}
+                {formData.legal_requirement_details && formData.legal_requirement_details.length > 0 ? (
+                  <ul className="list-disc pl-5">
+                    {formData.legal_requirement_details.map(req => (
+                      <li key={req.id}>{req.title}  </li>
+                    ))}
+                  </ul>
+                ) : formData.custom_legal_requirements ? (
+                  formData.custom_legal_requirements
+                ) : (
+                  "No related procedures"
+                )}
               </div>
             </div>
           </div>

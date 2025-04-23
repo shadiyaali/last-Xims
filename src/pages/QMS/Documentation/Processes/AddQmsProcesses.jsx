@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import file from "../../../../assets/images/Company Documentation/file-icon.svg";
 import { useNavigate, useParams } from "react-router-dom";
 import { BASE_URL } from "../../../../Utils/Config";
@@ -17,33 +17,35 @@ const AddQmsProcesses = () => {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  const [showAddProcessesSuccessModal, setShowAddProcessesSuccessModal] =
-    useState(false);
-  const [showAddQmsProcessesErrorModal, setShowAddQmsProcessesErrorModal] =
-    useState(false);
-  const [showDraftProcessesSuccessModal, setShowDraftProcessesSuccessModal] =
-    useState(false);
-  const [showDraftProcessesErrorModal, setShowDraftProcessesErrorModal] =
-    useState(false);
+  const [showAddProcessesSuccessModal, setShowAddProcessesSuccessModal] = useState(false);
+  const [showAddQmsProcessesErrorModal, setShowAddQmsProcessesErrorModal] = useState(false);
+  const [showDraftProcessesSuccessModal, setShowDraftProcessesSuccessModal] = useState(false);
+  const [showDraftProcessesErrorModal, setShowDraftProcessesErrorModal] = useState(false);
 
   // Add state for compliance options
   const [legalRequirementOptions, setLegalRequirementOptions] = useState([]);
+  // Add search state
+  const [searchTerm, setSearchTerm] = useState("");
+  
   const [formData, setFormData] = useState({
     name: "",
     type: "Stratgic",
     no: "",
-    legal_requirements: "",
+    legal_requirements: [],
     custom_legal_requirements: "",
     file: null,
     company: null,
     send_notification: false,
   });
+  
   const [dropdownRotation, setDropdownRotation] = useState({
     type: false,
     legal_requirements: false,
   });
+  
   const [showCustomField, setShowCustomField] = useState(false);
   const [fileName, setFileName] = useState("No file chosen");
+  
   const getUserCompanyId = () => {
     const storedCompanyId = localStorage.getItem("company_id");
     if (storedCompanyId) return storedCompanyId;
@@ -61,7 +63,9 @@ const AddQmsProcesses = () => {
     }
     return null;
   };
+
   const companyId = getUserCompanyId();
+  
   useEffect(() => {
     if (companyId) {
       setFormData((prev) => ({
@@ -71,6 +75,7 @@ const AddQmsProcesses = () => {
       fetchComplianceData();
     }
   }, [companyId]);
+  
   const getRelevantUserId = () => {
     const userRole = localStorage.getItem("role");
     if (userRole === "user") {
@@ -81,6 +86,7 @@ const AddQmsProcesses = () => {
     if (companyId) return companyId;
     return null;
   };
+  
   const fetchComplianceData = async () => {
     try {
       if (!companyId) {
@@ -88,20 +94,21 @@ const AddQmsProcesses = () => {
         return;
       }
       const response = await axios.get(
-        `${BASE_URL}/qms/procedure/${companyId}/`
+        `${BASE_URL}/qms/procedure-publish/${companyId}/`
       );
       setLegalRequirementOptions(response.data);
       console.log("Fetched compliance data:", response.data);
     } catch (err) {
       console.error("Error fetching compliance data:", err);
       setLegalRequirementOptions([
-        { compliance_name: "GDPR" },
-        { compliance_name: "HIPAA" },
-        { compliance_name: "CCPA" },
-        { compliance_name: "SOX" },
+        { compliance_name: "GDPR", title: "GDPR Compliance" },
+        { compliance_name: "HIPAA", title: "HIPAA Compliance" },
+        { compliance_name: "CCPA", title: "CCPA Compliance" },
+        { compliance_name: "SOX", title: "SOX Compliance" },
       ]);
     }
   };
+  
   const toggleDropdown = (field) => {
     setDropdownRotation((prev) => ({
       ...prev,
@@ -115,10 +122,55 @@ const AddQmsProcesses = () => {
       ...formData,
       [name]: type === "checkbox" ? checked : value,
     });
-    if (name === "legal_requirements") {
-      setShowCustomField(value === "N/A");
+  };
+
+  // Handle search term change
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  // Handle checkbox change for procedures
+  const handleProcedureCheckboxChange = (procedureTitle) => {
+    setFormData(prevData => {
+      const updatedProcedures = [...prevData.legal_requirements];
+
+      // If already selected, remove it
+      if (updatedProcedures.includes(procedureTitle)) {
+        return {
+          ...prevData,
+          legal_requirements: updatedProcedures.filter(item => item !== procedureTitle)
+        };
+      }
+      // Otherwise add it
+      else {
+        return {
+          ...prevData,
+          legal_requirements: [...updatedProcedures, procedureTitle]
+        };
+      }
+    });
+  };
+
+  // Toggle N/A option for custom field
+  const handleNAChange = (e) => {
+    const checked = e.target.checked;
+    setShowCustomField(checked);
+
+    if (checked) {
+      // If N/A is checked, clear all procedure selections
+      setFormData(prev => ({
+        ...prev,
+        legal_requirements: []
+      }));
+    } else {
+      // If N/A is unchecked, clear the custom field
+      setFormData(prev => ({
+        ...prev,
+        custom_legal_requirements: ""
+      }));
     }
   };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -136,31 +188,47 @@ const AddQmsProcesses = () => {
     setError(null);
     const userId = getRelevantUserId();
     const submitData = new FormData();
-    // Only include the specific fields requested
+    
+    // Add basic fields
     submitData.append("name", formData.name);
     submitData.append("type", formData.type);
     submitData.append("no", formData.no);
-    submitData.append("legal_requirements", formData.legal_requirements);
     submitData.append('user', userId);
-
-    // Only add custom_legal_requirements if it has a value
-    if (formData.custom_legal_requirements) {
-      submitData.append(
-        "custom_legal_requirements",
-        formData.custom_legal_requirements
-      );
+  
+    // Handle legal requirements based on N/A selection
+    if (showCustomField) {
+      // If N/A is selected, don't append any legal requirements
+      // But include the custom text
+      if (formData.custom_legal_requirements) {
+        submitData.append(
+          "custom_legal_requirements",
+          formData.custom_legal_requirements
+        );
+      }
+    } else {
+      // For many-to-many relationships, we need to send an array of IDs
+      // Since we're using a FormData object, we need to append each ID separately
+      formData.legal_requirements.forEach((procedureTitle, index) => {
+        // Find the procedure ID that matches this title
+        const procedure = legalRequirementOptions.find(p => p.title === procedureTitle);
+        if (procedure && procedure.id) {
+          submitData.append(`legal_requirements[${index}]`, procedure.id);
+        }
+      });
     }
+  
     // Add file if it exists
     if (formData.file instanceof File) {
       submitData.append("file", formData.file);
     }
+    
     // Add company ID
     if (formData.company) {
       submitData.append("company", formData.company);
     }
-
+  
     submitData.append("send_notification", formData.send_notification);
-    console.log("Data being sent:", Object.fromEntries(submitData.entries()));
+    
     try {
       const response = await axios.post(
         `${BASE_URL}/qms/processes/`,
@@ -188,7 +256,6 @@ const AddQmsProcesses = () => {
       setSubmitting(false);
     }
   };
-
   const handleCancel = () => {
     navigate("/company/qms/processes");
   };
@@ -200,50 +267,54 @@ const AddQmsProcesses = () => {
       </div>
     );
   }
+  
   const handleSaveAsDraft = async () => {
     try {
-      //   setLoading(true);
-
       const companyId = getUserCompanyId();
       const userId = getRelevantUserId();
-
+  
       if (!companyId || !userId) {
         setError("Company ID or User ID not found. Please log in again.");
         setLoading(false);
         return;
       }
-
+  
       const submitData = new FormData();
-
+  
       submitData.append("company", companyId);
       submitData.append("user", userId);
       submitData.append("is_draft", true);
-
-      // Add the specific fields requested
+  
+      // Add basic fields
       submitData.append("name", formData.name);
       submitData.append("type", formData.type);
       submitData.append("no", formData.no);
-      submitData.append("legal_requirements", formData.legal_requirements);
-
-      if (formData.custom_legal_requirements) {
-        submitData.append(
-          "custom_legal_requirements",
-          formData.custom_legal_requirements
-        );
+  
+      // Handle legal requirements based on N/A selection
+      if (showCustomField) {
+        if (formData.custom_legal_requirements) {
+          submitData.append(
+            "custom_legal_requirements",
+            formData.custom_legal_requirements
+          );
+        }
+      } else {
+        // For many-to-many relationships in draft
+        formData.legal_requirements.forEach((procedureTitle, index) => {
+          const procedure = legalRequirementOptions.find(p => p.title === procedureTitle);
+          if (procedure && procedure.id) {
+            submitData.append(`legal_requirements[${index}]`, procedure.id);
+          }
+        });
       }
-
-      // Corrected file handling
+  
+      // Add file if it exists
       if (formData.file) {
         submitData.append("file", formData.file);
       }
-
+  
       submitData.append("send_notification", formData.send_notification);
-
-      console.log(
-        "Sending draft data:",
-        Object.fromEntries(submitData.entries())
-      );
-
+  
       const response = await axios.post(
         `${BASE_URL}/qms/processes/draft-create/`,
         submitData,
@@ -253,7 +324,7 @@ const AddQmsProcesses = () => {
           },
         }
       );
-
+  
       setLoading(false);
       setShowDraftProcessesSuccessModal(true);
       setTimeout(() => {
@@ -271,6 +342,13 @@ const AddQmsProcesses = () => {
       console.error("Error saving Draft:", err.response?.data || err);
     }
   };
+  // Filter procedures based on search term
+  const filteredProcedures = legalRequirementOptions
+    .filter(option => 
+      !["GDPR", "HIPAA", "CCPA", "SOX"].includes(option.compliance_name) &&
+      option.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    
   return (
     <div className="bg-[#1C1C24] p-5 rounded-lg text-white">
       <h1 className="add-interested-parties-head px-[122px] border-b border-[#383840] pb-5">
@@ -367,9 +445,8 @@ const AddQmsProcesses = () => {
                 </select>
                 <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none transition-transform duration-300">
                   <ChevronDown
-                    className={`h-5 w-5 text-gray-500 transform transition-transform duration-300 ${
-                      dropdownRotation.type ? "rotate-180" : ""
-                    }`}
+                    className={`h-5 w-5 text-gray-500 transform transition-transform duration-300 ${dropdownRotation.type ? "rotate-180" : ""
+                      }`}
                   />
                 </div>
               </div>
@@ -378,52 +455,77 @@ const AddQmsProcesses = () => {
               <label className="block mb-3 add-qms-manual-label">
                 Related Procedure
               </label>
-              <div className="relative">
-                <select
-                  name="legal_requirements"
-                  value={formData.legal_requirements}
-                  onChange={handleInputChange}
-                  onFocus={() => toggleDropdown("legal_requirements")}
-                  onBlur={() => toggleDropdown("legal_requirements")}
-                  className="w-full add-qms-intertested-inputs appearance-none cursor-pointer"
-                >
-                  <option value="">Choose</option>
-                  {legalRequirementOptions
-                    .filter(
-                      (option) =>
-                        !["GDPR", "HIPAA", "CCPA", "SOX"].includes(
-                          option.compliance_name
-                        )
-                    )
-                    .map((option, index) => (
-                      <option key={index} value={option.title}>
-                        {option.title}
-                      </option>
-                    ))}
-                  <option value="N/A">N/A</option>
-                </select>
-                <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                  <ChevronDown
-                    className={`h-5 w-5 text-gray-500 transform transition-transform duration-300 ${
-                      dropdownRotation.legal_requirements ? "rotate-180" : ""
-                    }`}
-                  />
-                </div>
-              </div>
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  showCustomField
-                    ? "h-32 mt-3 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <textarea
-                  name="custom_legal_requirements"
-                  placeholder="Please specify"
-                  value={formData.custom_legal_requirements}
-                  onChange={handleInputChange}
-                  className="w-full add-qms-intertested-inputs !h-[118px]"
+
+              {/* Search box for procedures */}
+              <div className="relative mb-2 ">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                  placeholder="Search procedures..."
+                  className="w-full add-qms-intertested-inputs pl-8 "
                 />
+              
+              </div>
+
+          
+              <div className="border border-[#383840] rounded-md p-2 max-h-[130px] overflow-y-auto">
+        
+             
+                {showCustomField ? (
+                  
+                  <div className="mt-2">
+                    <textarea
+                      name="custom_legal_requirements"
+                      placeholder="Please specify"
+                      value={formData.custom_legal_requirements}
+                      onChange={handleInputChange}
+                      className="w-full add-qms-intertested-inputs !h-20"
+                    />
+                  </div>
+                ) : (
+               
+                  <>
+                    {filteredProcedures.length > 0 ? (
+                      filteredProcedures.map((option, index) => (
+                        <div key={index} className="flex items-center mb-2 ">
+                          <input
+                            type="checkbox"
+                            id={`procedure-${index}`}
+                            className="mr-2 form-checkboxes"
+                            checked={formData.legal_requirements.includes(option.title)}
+                            onChange={() => handleProcedureCheckboxChange(option.title)}
+                          />
+                          <label
+                            htmlFor={`procedure-${index}`}
+                            className="permissions-texts cursor-pointer"
+                          >
+                            {option.title}
+                          </label>
+                          
+                        </div>
+                        
+                      ))
+                    ) : (
+                      <p className="text-gray-400 mt-2">No procedures found</p>
+                    )}
+                  </>
+                )}
+                    <div className="flex items-center mb-4 pb-2  ">
+                  <input
+                    type="checkbox"
+                    id="procedure-na"
+                    className="mr-2 form-checkboxes"
+                    checked={showCustomField}
+                    onChange={handleNAChange}
+                  />
+                  <label
+                    htmlFor="procedure-na"
+                    className="permissions-texts cursor-pointer font-medium"
+                  >
+                    N/A
+                  </label>
+                </div>
               </div>
             </div>
           </div>
