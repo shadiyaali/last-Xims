@@ -195,11 +195,25 @@ import QmsComposeSystemMessaging from "./pages/QMS/ActionsMeetingManagement/Syst
 import QmsListInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsListInternalProblems";
 import QmsAddInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsAddInternalProblems";
 import QmsReviewTraining from "./pages/QMS/EmployeeTraining/ReviewTraining/QmsReviewTraining";
-
+import QmsListAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsListAudit";
+import QmsAddAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsAddAudit";
+import QmsEditAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsEditAudit";
+import QmsViewAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsViewAudit";
+import QmsDraftAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsDraftAudit";
+import QmsEditDraftAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsEditDraftAudit";
+import QmsViewDraftAudit from "./pages/QMS/AuditsAndInspectionManagement/Audits/QmsViewDraftAudit";
+import QmsListInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsListInspection";
+import QmsAddInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsAddInspection";
+import QmsEditInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsEditInspection";
+import QmsViewInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsViewInspection";
+import QmsDraftInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsDraftInspection";
+import QmsEditDraftInspections from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsEditDraftInspections";
+import QmsViewDraftInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsViewDraftInspection";
+ 
 const ThemedApp = () => {
   const { theme } = useTheme();
 
-  // Apply the theme class to the body
+ 
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
@@ -207,7 +221,7 @@ const ThemedApp = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Routes */}
+       
         <Route path="/">
           <Route index element={<AdminLogin />} />
           <Route path="forgotpassword" element={<Password />} />
@@ -381,15 +395,29 @@ const ThemedApp = () => {
           <Route path="qms/edit-draft-sustainability/:id" element={<QmsEditDraftSustainability />} />
           <Route path="qms/view-draft-sustainability/:id" element={<QmsViewDraftSustainability />} />
 
+     {/* QMS Audits & Inspection management */}
+          <Route path="qms/list-audit" element={<QmsListAudit />} />
+          <Route path="qms/add-audit" element={<QmsAddAudit />} />
+          <Route path="qms/edit-audit/:id" element={<QmsEditAudit />} />
+          <Route path="qms/view-audit/:id" element={<QmsViewAudit />} />
+          <Route path="qms/draft-audit" element={<QmsDraftAudit />} />
+          <Route path="qms/edit-draft-audit/:id" element={<QmsEditDraftAudit />} />
+          <Route path="qms/view-draft-audit/:id" element={<QmsViewDraftAudit />} />
 
+          <Route path="qms/list-inspection" element={<QmsListInspection />} />
+          <Route path="qms/add-inspection" element={<QmsAddInspection />} />
+          <Route path="qms/edit-inspection/:id" element={<QmsEditInspection />} />
+          <Route path="qms/view-inspection/:id" element={<QmsViewInspection />} />
+          <Route path="qms/draft-inspection" element={<QmsDraftInspection />} />
+          <Route path="qms/edit-draft-inspection/:id" element={<QmsEditDraftInspections />} />
+          <Route path="qms/view-draft-inspection/:id" element={<QmsViewDraftInspection />} />
           {/* QMS User Management */}
           <Route path="qms/adduser" element={<QMSAddUser />} />
           <Route path="qms/listuser" element={<QMSListUser />} />
           <Route path="qms/edituser/:id" element={<QMSEditUser />} />
           <Route path="qms/user-details/:id" element={<QMSViewUser />} />
 
-
-
+ 
 
 
 

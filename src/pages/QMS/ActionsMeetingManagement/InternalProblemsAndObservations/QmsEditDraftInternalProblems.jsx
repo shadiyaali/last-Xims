@@ -2,49 +2,30 @@ import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import InternalProblemsModal from '../InternalProblemsModal';
-import AddCarNumberModal from '../AddCarNumberModal';
 
-const QmsAddInternalProblems = () => {
+const QmsEditDraftInternalProblems = () => {
     const navigate = useNavigate();
-    const [isCauseModalOpen, setIsCauseModalOpen] = useState(false);
-    const [isCarModalOpen, setIsCarModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         cause: 'Internal',
         description: '',
         action: '',
         executor: '',
         solved: '',
-        causes: [],
         dateProblem: {
             day: '',
             month: '',
             year: ''
         },
         correctiveAction: '',
-        corrections: '',
-        car: '',
-        cars: [],
+        send_notification: false
     });
 
     const [focusedDropdown, setFocusedDropdown] = useState(null);
 
-    const handleListInternalProblems = () => {
-        navigate('/company/qms/list-internal-problems-observations')
+    const handleListDraftInternalProblems = () => {
+        navigate('/company/qms/draft-internal-problems-observations')
     }
-
-    const handleOpenCauseModal = () => {
-        setIsCauseModalOpen(true);
-    };
-    const handleOpenCarModal = () => {
-        setIsCarModalOpen(true);
-    };
-
-    const handleCloseCauseModal = () => {
-        setIsCauseModalOpen(false);
-    };
-    const handleCloseCarModal = () => {
-        setIsCarModalOpen(false);
-    };
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -76,19 +57,19 @@ const QmsAddInternalProblems = () => {
         }
     };
 
-    const handleAddCause = (causes) => {
-        setFormData({
-            ...formData,
-            causes: causes
-        });
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
     };
 
-    const handleAddCar = (cars) => {
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleEditCause = (cause) => {
         setFormData({
             ...formData,
-            cars: cars
+            cause: cause
         });
-      
     };
 
     const handleSubmit = (e) => {
@@ -99,7 +80,7 @@ const QmsAddInternalProblems = () => {
     };
 
     const handleCancel = () => {
-        navigate('/company/qms/list-internal-problems-observations')
+        navigate('/company/qms/draft-internal-problems-observations')
     };
 
     // Generate options for dropdowns
@@ -118,31 +99,21 @@ const QmsAddInternalProblems = () => {
 
     return (
         <div className="bg-[#1C1C24] text-white p-5 rounded-lg">
-
-            <InternalProblemsModal
-                isOpen={isCauseModalOpen}
-                onClose={handleCloseCauseModal}
-                onAddCause={handleAddCause}
-            />
-
-            <AddCarNumberModal
-                isOpen={isCarModalOpen}
-                onClose={handleCloseCarModal}
-                onAddCause={handleAddCar}
-            />
-
-             
-
-
-
-
             <div className="flex justify-between items-center border-b border-[#383840] px-[104px] pb-5">
-                <h1 className="add-training-head">Add Internal Problems and Observations</h1>
+                <h1 className="add-training-head">Edit Draft Internal Problems and Observations</h1>
+
+                <InternalProblemsModal
+                    isOpen={isModalOpen}
+                    onClose={handleCloseModal}
+                    onAddCause={handleEditCause}
+                />
+
+
                 <button
                     className="border border-[#858585] text-[#858585] rounded px-3 h-[42px] list-training-btn duration-200"
-                    onClick={() => handleListInternalProblems()}
+                    onClick={() => handleListDraftInternalProblems()}
                 >
-                    Internal Problems and Observations
+                    Draft Internal Problems and Observations
                 </button>
             </div>
 
@@ -166,18 +137,14 @@ const QmsAddInternalProblems = () => {
                         </select>
                         <ChevronDown
                             className={`absolute right-3 top-1/3 transform transition-transform duration-300 
-                            ${focusedDropdown === "cause" ? "rotate-180" : ""}`}
+                              ${focusedDropdown === "cause" ? "rotate-180" : ""}`}
                             size={20}
                             color="#AAAAAA"
                         />
                     </div>
-                    <button
-                        type="button"
-                        className='flex justify-start add-training-label !text-[#1E84AF]'
-                        onClick={handleOpenCauseModal}
-                    >
-                        Add Causes / Causes
-                    </button>
+                    <button className='flex justify-start add-training-label !text-[#1E84AF]'
+                        onClick={handleOpenModal}
+                    >Add Causes / Root Causes</button>
                 </div>
 
                 <div className="flex flex-col gap-3">
@@ -225,7 +192,7 @@ const QmsAddInternalProblems = () => {
                         </select>
                         <ChevronDown
                             className={`absolute right-3 top-[60%] transform transition-transform duration-300 
-                            ${focusedDropdown === "executor" ? "rotate-180" : ""}`}
+                              ${focusedDropdown === "executor" ? "rotate-180" : ""}`}
                             size={20}
                             color="#AAAAAA"
                         />
@@ -248,7 +215,7 @@ const QmsAddInternalProblems = () => {
                         </select>
                         <ChevronDown
                             className={`absolute right-3 top-[60%] transform transition-transform duration-300 
-                            ${focusedDropdown === "solved" ? "rotate-180" : ""}`}
+                              ${focusedDropdown === "solved" ? "rotate-180" : ""}`}
                             size={20}
                             color="#AAAAAA"
                         />
@@ -274,7 +241,7 @@ const QmsAddInternalProblems = () => {
                             </select>
                             <ChevronDown
                                 className={`absolute right-3 top-1/3 transform transition-transform duration-300
-                                ${focusedDropdown === "dateProblem.day" ? "rotate-180" : ""}`}
+                                  ${focusedDropdown === "dateProblem.day" ? "rotate-180" : ""}`}
                                 size={20}
                                 color="#AAAAAA"
                             />
@@ -295,7 +262,7 @@ const QmsAddInternalProblems = () => {
                             </select>
                             <ChevronDown
                                 className={`absolute right-3 top-1/3 transform transition-transform duration-300
-                                ${focusedDropdown === "dateProblem.month" ? "rotate-180" : ""}`}
+                                  ${focusedDropdown === "dateProblem.month" ? "rotate-180" : ""}`}
                                 size={20}
                                 color="#AAAAAA"
                             />
@@ -316,7 +283,7 @@ const QmsAddInternalProblems = () => {
                             </select>
                             <ChevronDown
                                 className={`absolute right-3 top-1/3 transform transition-transform duration-300
-                                ${focusedDropdown === "dateProblem.year" ? "rotate-180" : ""}`}
+                                  ${focusedDropdown === "dateProblem.year" ? "rotate-180" : ""}`}
                                 size={20}
                                 color="#AAAAAA"
                             />
@@ -341,68 +308,32 @@ const QmsAddInternalProblems = () => {
                         </select>
                         <ChevronDown
                             className={`absolute right-3 top-1/3 transform transition-transform duration-300
-                            ${focusedDropdown === "correctiveAction" ? "rotate-180" : ""}`}
+                              ${focusedDropdown === "correctiveAction" ? "rotate-180" : ""}`}
                             size={20}
                             color="#AAAAAA"
                         />
                     </div>
                 </div>
 
-                {/* Conditionally render Corrections and Number CAR fields */}
-                {formData.correctiveAction === 'Yes' && (
-                    <>
-                        <div className="flex flex-col gap-3">
-                            <label className="add-training-label">Corrections</label>
-                            <input
-                                type='text'
-                                name="corrections"
-                                value={formData.corrections}
-                                onChange={handleChange}
-                                className="add-training-inputs"
-                            />
-                        </div>
-
-                        <div className="flex flex-col gap-3">
-                            <label className="add-training-label">Number CAR</label>
-                            <div className="relative">
-                                <select
-                                    name="car"
-                                    value={formData.car}
-                                    onChange={handleChange}
-                                    onFocus={() => setFocusedDropdown("car")}
-                                    onBlur={() => setFocusedDropdown(null)}
-                                    className="add-training-inputs appearance-none pr-10 cursor-pointer"
-                                >
-                                    <option value="" disabled>Select</option>
-                                </select>
-                                <ChevronDown
-                                    className={`absolute right-3 top-1/3 transform transition-transform duration-300
-                                    ${focusedDropdown === "car" ? "rotate-180" : ""}`}
-                                    size={20}
-                                    color="#AAAAAA"
-                                />
-                            </div>
-                            <button
-                                type="button"
-                                className='flex justify-start add-training-label !text-[#1E84AF]'
-                                onClick={handleOpenCarModal}
-                            >
-                                Add CAR Number
-                            </button>
-                        </div>
-                    </>
-                )}
+                <div></div>
+                <div className="flex items-end justify-end mt-3">
+                    <label className="flex items-center">
+                        <input
+                            type="checkbox"
+                            name="send_notification"
+                            className="mr-2 form-checkboxes"
+                            checked={formData.send_notification}
+                            onChange={handleChange}
+                        />
+                        <span className="permissions-texts cursor-pointer">
+                            Send Notification
+                        </span>
+                    </label>
+                </div>
 
                 {/* Form Actions */}
-                <div className="md:col-span-2 flex gap-4 justify-between">
-                    <div>
-                        <button
-                            type="button"
-                            className='request-correction-btn duration-200'
-                        >
-                            Save as Draft
-                        </button>
-                    </div>
+                <div className="md:col-span-2 flex gap-4 justify-end">
+
                     <div className='flex gap-5'>
                         <button
                             type="button"
@@ -423,5 +354,4 @@ const QmsAddInternalProblems = () => {
         </div>
     );
 };
-
-export default QmsAddInternalProblems;
+export default QmsEditDraftInternalProblems
