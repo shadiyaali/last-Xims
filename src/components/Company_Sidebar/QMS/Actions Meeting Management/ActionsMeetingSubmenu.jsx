@@ -48,8 +48,8 @@ const ActionsMeetingSubmenu = (props) => {
             icon: (
                 <img src={record} alt="Record Format" className="w-[15px] h-[15px]" />
             ),
-            path: "/company/qms/list-internal-problems-observations",
-            relatedPaths: ["/company/qms/add-internal-problems-observations",
+            path: "/company/qms/list-internal-problem",
+            relatedPaths: ["/company/qms/add-internal-problem",
                 // "/company/qms/list-outbox",
                 // "/company/qms/list-draft",
                 // "/company/qms/compose",

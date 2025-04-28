@@ -28,7 +28,7 @@ import QmsManual from "./pages/QMS/Documentation/Manual/QmsManual";
 import QmsProcedure from "./pages/QMS/Documentation/Procedure/QmsProcedure";
 import QmsRecordFormat from "./pages/QMS/Documentation/Record Format/QmsRecordFormat";
 import QmsProcesses from "./pages/QMS/Documentation/Processes/QmsProcesses";
-
+import QmsDraftSupplier from "./pages/QMS/SupplierManagement/SupplierManagement/QmsDraftSupplier";
 import EmsPolicy from "./pages/EMS/Documentation/Policy/EmsPolicy";
 import AddQmsPolicy from "./pages/QMS/Documentation/Policy/AddQmsPolicy";
 import AddScope from "./pages/QMS/Documentation/Scope Statements/AddScope";
@@ -209,7 +209,11 @@ import QmsViewInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspect
 import QmsDraftInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsDraftInspection";
 import QmsEditDraftInspections from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsEditDraftInspections";
 import QmsViewDraftInspection from "./pages/QMS/AuditsAndInspectionManagement/Inspection/QmsViewDraftInspection";
- 
+import QmsEditInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsEditInternalProblems";
+import QmsViewInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsViewInternalProblems";
+import QmsDraftInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsDraftInternalProblems";
+import QmsEditDraftInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsEditDraftInternalProblems";
+import QmsViewDraftInternalProblems from "./pages/QMS/ActionsMeetingManagement/InternalProblemsAndObservations/QmsViewDraftInternalProblems";
 const ThemedApp = () => {
   const { theme } = useTheme();
 
@@ -346,8 +350,14 @@ const ThemedApp = () => {
           <Route path="qms/list-draft" element={<QmsListDraftSystemMessaging />} />
           <Route path="qms/compose" element={<QmsComposeSystemMessaging />} />
 
-          <Route path="qms/list-internal-problems-observations" element={<QmsListInternalProblems/>} />
-          <Route path="qms/add-internal-problems-observations" element={<QmsAddInternalProblems/>} />
+          <Route path="qms/list-internal-problem" element={<QmsListInternalProblems/>} />
+          <Route path="qms/add-internal-problem" element={<QmsAddInternalProblems/>} />
+     
+          <Route path="qms/edit-internal-problem/:id" element={<QmsEditInternalProblems />} />
+          <Route path="qms/view-internal-problem/:id" element={<QmsViewInternalProblems />} />
+          <Route path="qms/draft-internal-problem" element={<QmsDraftInternalProblems />} />
+          <Route path="qms/edit-draft-internal-problem/:id" element={<QmsEditDraftInternalProblems />} />
+          <Route path="qms/view-draft-internal-problem/:id" element={<QmsViewDraftInternalProblems />} />
 
           
 
@@ -420,7 +430,7 @@ const ThemedApp = () => {
  
 
 
-
+          <Route path="qms/draft-supplier" element={<QmsDraftSupplier />} />
 
 
 
